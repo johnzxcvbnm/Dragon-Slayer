@@ -10,48 +10,53 @@ const exportField = () => {
   for(let i of $myWaterSquares){
     myArray.push(i.textContent);
   }
-  console.log(myArray);
+  // console.log(myArray);
   //Sample Output: ["Water", "0-14", "1-17", "1-20", "2-15", "2-18", "3-12", "3-16", "3-22", "4-13", "4-20", "5-17"]
 
   //Plains
-  myArray = [];
+  // myArray = [];
   const $myPlains = $(".plains");
   for(let i of $myPlains){
     myArray.push(i.textContent);
   }
-  console.log(myArray);
+  // console.log(myArray);
 
   //Forest
-  myArray = [];
+  // myArray = [];
   const $myForest = $(".forest");
   for(let i of $myForest){
     myArray.push(i.textContent);
   }
-  console.log(myArray);
+  // console.log(myArray);
 
   //Mountains
-  myArray = [];
+  // myArray = [];
   const $myMountains = $(".mountains");
   for(let i of $myMountains){
     myArray.push(i.textContent);
   }
-  console.log(myArray);
+  // console.log(myArray);
 
   //Desert
-  myArray = [];
+  // myArray = [];
   const $myDesert = $(".desert");
   for(let i of $myDesert){
     myArray.push(i.textContent);
   }
-  console.log(myArray);
+  // console.log(myArray);
 
   //Towns
-  myArray = [];
+  // myArray = [];
   const $myTowns = $(".towns");
   for(let i of $myTowns){
     myArray.push(i.textContent);
   }
   console.log(myArray);
+  //You can copy the full array to the clipboard
+  //Just right click the console output and store it as a global variable
+  //Chrome will assign it to temp1
+  //Type in the console 'copy(temp1)' to copy it to the clipboard
+  //Then you can paste it to where you need it to go
 }
 
 //Function changes the color of the 'currentButton' to the selected color
