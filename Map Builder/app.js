@@ -1,13 +1,19 @@
-let currentColor = "";
+let currentClass = "";
 
-const changeColor = (color) => {
-  currentColor = color;
+const exportField = () => {
+  
+}
+
+const changeColor = (color, myClass) => {
+  currentClass = myClass;
   $("#currentButton").css("background-color", color);
 }
 
 const colorSquare = (event) => {
   const $mySquare = $(event.currentTarget);
-  $mySquare.css("background-color", currentColor);
+  $mySquare.removeClass();
+  $mySquare.addClass("square");
+  $mySquare.addClass(currentClass);
 }
 
 const generateMap = () => {
@@ -24,14 +30,14 @@ const generateMap = () => {
 }
 
 const enableButtons = () => {
-  $("#waterButton").on("click", () => { changeColor("#00B2FF"); } );
-  $("#plainsButton").on("click", () => { changeColor("#17FF00"); } );
-  $("#forestButton").on("click", () => { changeColor("#135A0C"); } );
-  $("#mountainsButton").on("click", () => { changeColor("#525A51"); } );
-  $("#desertButton").on("click", () => { changeColor("#EBD81F"); } );
-  $("#townButton").on("click", () => { changeColor("#000000"); } );
+  $("#waterButton").on("click", () => { changeColor("#00B2FF", "water"); } );
+  $("#plainsButton").on("click", () => { changeColor("#17FF00", "plains"); } );
+  $("#forestButton").on("click", () => { changeColor("#135A0C", "forest"); } );
+  $("#mountainsButton").on("click", () => { changeColor("#525A51", "mountains"); } );
+  $("#desertButton").on("click", () => { changeColor("#EBD81F", "desert"); } );
+  $("#townButton").on("click", () => { changeColor("#000000", "towns"); } );
   $("#generateButton").on("click", generateMap);
-  $()
+  $("#exportButton").on("click", exportField);
 }
 
 $( () => {
