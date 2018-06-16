@@ -1,54 +1,39 @@
-const randomGen = () => {
-  return Math.floor(Math.random() * 256);
+let currentColor = "";
+
+const changeColor = (color) => {
+  currentColor = color;
+  $("#currentButton").css("background-color", color);
 }
 
-const changeColor = (event) => {
-  $(event.currentTarget).css("background-color", `rgb(${randomGen()}, ${randomGen()}, ${randomGen()})`);
+const colorSquare = (event) => {
+  const $mySquare = $(event.currentTarget);
+  $mySquare.css("background-color", currentColor);
 }
 
-const calculateSquare = (num) => {
-  const contArea = parseInt($(".container").css("width")) * parseInt($(".container").css("height"));
-  const squareArea = Math.floor(contArea / num);
-  return Math.floor(Math.floor(Math.sqrt(squareArea)));
-}
-
-const createPad = (num) => {
-  $(".container").empty();
-  const squareWidth = calculateSquare(num);
-  const numRows = Math.floor(parseInt($(".container").css("height")) / squareWidth);
-  const numSquares = Math.floor(parseInt($(".container").css("width")) / squareWidth);
-
-  for(let i = 0; i < numRows; i++){
-    const $myRow = $("<div>").css( "width", $(".container").css("width") );
-    $myRow.css("height", (squareWidth).toString());
-    $(".container").append($myRow);
-
-    for(let x = 0; x < numSquares; x++){
-      const $square = $("<div>").addClass("square");
-      $square.css("width", squareWidth);
-      $square.css("height", squareWidth);
-      $myRow.append($square);
-      $square.on("mouseover", changeColor);
+const generateMap = () => {
+  for(let i = 0; i < 30; i++){
+    for(let x = 0; x < 30; x++){
+      const $mySquare = $("<div>");
+      $mySquare.addClass("square");
+      $mySquare.attr("id", `${i}-${x}`);
+      $mySquare.text(`${i}-${x}`);
+      $mySquare.on("click", colorSquare);
+      $(".container").append($mySquare);
     }
   }
-
-  // for(let i = 0; i < num; i++){
-  //   const $square = $("<div>").addClass("square");
-  //   $square.css("width", squareWidth);
-  //   $square.css("height", squareWidth);
-  //   $(".container").append($square);
-  //   $square.on("mouseover", changeColor);
-  // }
 }
 
-const pullInput = () => {
-  const myInput = parseInt($("#inputBox").val());
-  if(myInput > 0){
-    createPad(myInput);
-  }
+const enableButtons = () => {
+  $("#waterButton").on("click", () => { changeColor("#00B2FF"); } );
+  $("#plainsButton").on("click", () => { changeColor("#17FF00"); } );
+  $("#forestButton").on("click", () => { changeColor("#135A0C"); } );
+  $("#mountainsButton").on("click", () => { changeColor("#525A51"); } );
+  $("#desertButton").on("click", () => { changeColor("#EBD81F"); } );
+  $("#townButton").on("click", () => { changeColor("#000000"); } );
+  $("#generateButton").on("click", generateMap);
+  $()
 }
 
 $( () => {
-
-  $("#inputButton").on("click", pullInput);
+  enableButtons();
 });//End of Document Ready Function

@@ -1,23 +1,64 @@
-/* html {
-  background-color: black;
-} */
 
 .container {
-  /* width: 700px; */
-  height: 800px;
-  width: 90%;
-
-  border: 1px solid gold;
+  width: 1500px;
+  height: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
 }
 
 .square {
-  width: 20px;
-  height: 20px;
-  /* border: 1px solid grey; */
-  display: inline-block;
-  background-color: ivory;
+  width: 50px;
+  height: 50px;
+  color: red;
+  background-color: #FFD8E9;
 }
 
-.pink {
+.colorSection {
+  width: 1500px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.button {
+  width: 500px;
+  height: 100px;
+}
+
+.water {
+  background-color: #00B2FF;
+}
+
+.plains {
+  background-color: #17FF00;
+}
+
+.forest {
+  background-color: #135A0C;
+}
+
+.mountains{
+  background-color: #525A51;
+}
+
+.desert {
+  background-color: #EBD81F;
+}
+
+.towns {
+  background-color: #000000;
+  color: white;
+}
+
+#generateButton {
   background-color: pink;
+}
+
+#exportButton {
+  background-color: grey;
+}
+
+#currentButton {
+  color: red;
 }
