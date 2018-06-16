@@ -1,3 +1,6 @@
+/**********************************
+****   Square Container CSS    ****
+**********************************/
 
 .container {
   width: 1500px;
@@ -7,12 +10,20 @@
   border: 2px solid black;
 }
 
+/**********************************
+******   Color Square CSS    ******
+**********************************/
+
 .square {
   width: 50px;
   height: 50px;
   /* color: red; */
   background-color: #FFD8E9;
 }
+
+/**********************************
+***   Button Container CSS    *****
+**********************************/
 
 .colorSection {
   width: 1500px;
@@ -21,10 +32,18 @@
   flex-wrap: wrap;
 }
 
+/**********************************
+*****   Generic Button CSS    *****
+**********************************/
+
 .button {
   width: 500px;
   height: 100px;
 }
+
+/**********************************
+******   Color Class CSS    *******
+**********************************/
 
 .water {
   background-color: #00B2FF;
@@ -50,6 +69,10 @@
   background-color: #000000;
   color: white;
 }
+
+/**********************************
+****   Special Button CSS    ******
+**********************************/
 
 #generateButton {
   background-color: pink;
