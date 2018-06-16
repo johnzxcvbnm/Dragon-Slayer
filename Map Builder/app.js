@@ -83,8 +83,8 @@ const generateMap = () => {
     for(let x = 0; x < 30; x++){
       const $mySquare = $("<div>");
       $mySquare.addClass("square");
-      $mySquare.attr("id", `${i}-${x}`);
-      $mySquare.text(`${i}-${x}`);
+      $mySquare.attr("id", `${x}-${i}`);
+      $mySquare.text(`${x}-${i}`);
       $mySquare.on("click", colorSquare);
       $(".container").append($mySquare);
     }
