@@ -117,5 +117,29 @@ h5 {
 .square {
   width: 50px;
   height: 50px;
-  /* background-color: green; */
+  /* background-color: #EBD81F; */
+}
+
+.water {
+  background-color: #00B2FF;
+}
+
+.plains {
+  background-color: #17FF00;
+}
+
+.forest {
+  background-color: #135A0C;
+}
+
+.mountains{
+  background-color: #525A51;
+}
+
+.desert {
+  background-color: #EBD81F;
+}
+
+.towns {
+  background-color: #000000;
 }

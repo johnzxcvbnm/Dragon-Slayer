@@ -80,5 +80,5 @@ const disableMoveButtons = () => {
 $( () => {
   generateDivs();
   enableMoveButtons();
-  disableMoveButtons();
+  // disableMoveButtons();
 });

@@ -1,0 +1,23 @@
+/* html {
+  background-color: black;
+} */
+
+.container {
+  /* width: 700px; */
+  height: 800px;
+  width: 90%;
+
+  border: 1px solid gold;
+}
+
+.square {
+  width: 20px;
+  height: 20px;
+  /* border: 1px solid grey; */
+  display: inline-block;
+  background-color: ivory;
+}
+
+.pink {
+  background-color: pink;
+}
