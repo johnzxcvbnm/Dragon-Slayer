@@ -37,8 +37,8 @@ const fieldOfView = () => {
 }
 
 const generateDivs = () => {
-    for(let i = 0; i < 30; i++){
-      for(let x = 0; x < 30; x++){
+    for(let i = 0; i < 50; i++){
+      for(let x = 0; x < 50; x++){
         const $mySquare = $("<div>");
         $mySquare.addClass("square");
         $mySquare.attr("id", `${x}-${i}`);
@@ -63,27 +63,27 @@ const generateDivs = () => {
 //Builds the terrain on certain rows to test to see if the player can move properly
 const terrainCheck = () => {
   //Water - Col 22
-  for(let i = 0; i < 30; i++){
+  for(let i = 0; i < 50; i++){
     $(`#22-${i}`).removeClass().addClass("water").addClass("square");
   }
   //Plains - Col 21
-  for(let i = 0; i < 30; i++){
+  for(let i = 0; i < 50; i++){
     $(`#21-${i}`).removeClass().addClass("plains").addClass("square");
   }
   //Forest - Col 19
-  for(let i = 0; i < 30; i++){
+  for(let i = 0; i < 50; i++){
     $(`#19-${i}`).removeClass().addClass("forest").addClass("square");
   }
   //Mountain - Col 15
-  for(let i = 0; i < 30; i++){
+  for(let i = 0; i < 50; i++){
     $(`#12-${i}`).removeClass().addClass("mountains").addClass("square");
   }
   //Desert - Col 19
-  for(let i = 0; i < 30; i++){
+  for(let i = 0; i < 50; i++){
     $(`#19-${i}`).removeClass().addClass("desert").addClass("square");
   }
   //Town - Col 17
-  for(let i = 0; i < 30; i++){
+  for(let i = 0; i < 50; i++){
     $(`#17-${i}`).removeClass().addClass("towns").addClass("square");
   }
 }
@@ -131,16 +131,15 @@ const disableMoveButtons = () => {
 
 //Reset the game to it's original position
 const resetGame = () => {
-  playerPos[0] = 20;
-  playerPos[1] = 15;
+  playerPos[0] = 35;
+  playerPos[1] = 41;
   generateDivs();
   enableMoveButtons();
+  buildDefaultMap();
 }
 
 //Document Ready function
 $( () => {
   resetGame();
   //Enable misc buttons
-  buildMapTest();
-  combatTest();
 });//End of Document Ready Function
