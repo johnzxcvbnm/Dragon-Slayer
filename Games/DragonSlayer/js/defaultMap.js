@@ -12,6 +12,7 @@
 // defaultDesertBuild()
 // defaultMountainsBuild()
 // defaultTownsBuild()
+// defaultPlayerPos(playerPos)
 
 
 const defaultWaterBuild = () => {
@@ -36,4 +37,9 @@ const defaultDesertBuild = () => {
 
 const defaultTownsBuild = () => {
   return ["37-6",  "15-15",  "29-23",  "35-41",  "20-44"];
+}
+
+const defaultPlayerPos = (playerPos) => {
+  playerPos[0] = 35;
+  playerPos[1] = 41;
 }

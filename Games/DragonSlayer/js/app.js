@@ -3,10 +3,6 @@
 // retreatButton
 // healButton
 // attackButton
-// downButton
-// rightButton
-// leftButton
-// upButton
 // playerPotions
 // playerHealth
 // playerName
@@ -16,7 +12,7 @@
 // mainSection (class)
 
 //Players current position in the map and image
-const playerPos = [20, 15];
+const playerPos = [15, 15];
 const $playerImg = $("<img>").attr("src", "tiles/playerTile.png");
 
 //Random background colors.  Used for building the fieldOfView function
@@ -137,11 +133,10 @@ const disableMoveButtons = () => {
 
 //Reset the game to it's original position
 const resetGame = () => {
-  playerPos[0] = 35;
-  playerPos[1] = 41;
   generateDivs();
   enableMoveButtons();
-  buildDefaultMap();
+  buildDefaultMap(playerPos);
+  fieldOfView();
 }
 
 //Document Ready function

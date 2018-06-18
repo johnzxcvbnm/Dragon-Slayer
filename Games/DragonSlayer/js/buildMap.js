@@ -28,7 +28,8 @@ const buildMap = (water, plains, forest, mountains, desert, towns) => {
 
 
 //Build the default map - by John Kusching
-const buildDefaultMap = () => {
+const buildDefaultMap = (playerPos) => {
+  defaultPlayerPos(playerPos);
   buildMap(defaultWaterBuild(),
            defaultPlainsBuild(),
            defaultForestBuild(),
