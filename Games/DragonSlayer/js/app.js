@@ -15,10 +15,11 @@
 // aboutButton
 // mainSection (class)
 
-//Players current position in the map
+//Players current position in the map and image
 const playerPos = [20, 15];
+const $playerImg = $("<img>").attr("src", "tiles/playerTile.png");
 
-
+//Random background colors.  Used for building the fieldOfView function
 const randomColor = () => {
   const red = Math.floor(Math.random() * 256);
   const blue = Math.floor(Math.random() * 256);
@@ -26,6 +27,7 @@ const randomColor = () => {
   return `rgb(${red}, ${blue}, ${green})`;
 }
 
+//Generates the new field of view
 const fieldOfView = () => {
   $(".square").hide();
 
@@ -34,19 +36,24 @@ const fieldOfView = () => {
       $(`#${i}-${x}`).show();
     }
   }
+
+  //Moves the player's icon to their new position
+  $playerImg.appendTo( $(`#${playerPos[0]}-${playerPos[1]}`) );
 }
 
+//Creates the whole map and appends it to the container.  All squares are given a cordinate as an ID, which is used to create a map with function.
 const generateDivs = () => {
     for(let i = 0; i < 50; i++){
       for(let x = 0; x < 50; x++){
         const $mySquare = $("<div>");
-        $mySquare.addClass("square");
+        // $mySquare.addClass("square");
         $mySquare.attr("id", `${x}-${i}`);
-        $mySquare.text(`${x}-${i}`);
+        // $mySquare.text(`${x}-${i}`);
         $mySquare.hide();
         $(".mainSection").append($mySquare);
       }
     }
+
     // terrainCheck();
     fieldOfView();
 
@@ -64,27 +71,27 @@ const generateDivs = () => {
 const terrainCheck = () => {
   //Water - Col 22
   for(let i = 0; i < 50; i++){
-    $(`#22-${i}`).removeClass().addClass("water").addClass("square");
+    $(`#22-${i}`).addClass("water").addClass("square");
   }
   //Plains - Col 21
   for(let i = 0; i < 50; i++){
-    $(`#21-${i}`).removeClass().addClass("plains").addClass("square");
+    $(`#21-${i}`).addClass("plains").addClass("square");
   }
   //Forest - Col 19
   for(let i = 0; i < 50; i++){
-    $(`#19-${i}`).removeClass().addClass("forest").addClass("square");
+    $(`#19-${i}`).addClass("forest").addClass("square");
   }
   //Mountain - Col 15
   for(let i = 0; i < 50; i++){
-    $(`#12-${i}`).removeClass().addClass("mountains").addClass("square");
+    $(`#12-${i}`).addClass("mountains").addClass("square");
   }
   //Desert - Col 19
   for(let i = 0; i < 50; i++){
-    $(`#19-${i}`).removeClass().addClass("desert").addClass("square");
+    $(`#19-${i}`).addClass("desert").addClass("square");
   }
   //Town - Col 17
   for(let i = 0; i < 50; i++){
-    $(`#17-${i}`).removeClass().addClass("towns").addClass("square");
+    $(`#17-${i}`).addClass("towns").addClass("square");
   }
 }
 
@@ -107,7 +114,6 @@ const movePlayer = (x, y) => {
   if(canMove(playerPos[0] + x, playerPos[1] + y)){
     playerPos[0] += x;
     playerPos[1] += y;
-    console.log("Player Pos " + playerPos[0] + ", " + playerPos[1]);
     fieldOfView();
   }
 }

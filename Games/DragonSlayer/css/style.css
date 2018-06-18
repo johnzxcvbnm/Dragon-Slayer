@@ -121,25 +121,31 @@ h5 {
 }
 
 .water {
-  background-color: #00B2FF;
+  /* background-color: #00B2FF; */
+    background-image: url("../tiles/waterTile.png");
 }
 
 .plains {
-  background-color: #17FF00;
+  /* background-color: #17FF00; */
+  background-image: url("../tiles/plainsTile.png");
 }
 
 .forest {
-  background-color: #135A0C;
+  /* background-color: #135A0C; */
+  background-image: url("../tiles/forestTile.png");
 }
 
 .mountains{
-  background-color: #525A51;
+  /* background-color: #525A51; */
+  background-image: url("../tiles/mountainTile.png");
 }
 
 .desert {
-  background-color: #EBD81F;
+  /* background-color: #EBD81F; */
+  background-image: url("../tiles/desertTile.png");
 }
 
 .towns {
-  background-color: #000000;
+  /* background-color: #000000; */
+  background-image: url("../tiles/townTile.png");
 }
