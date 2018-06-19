@@ -1,25 +1,23 @@
-const playerPos = [15, 15];
-
-const playerChar = {
-  health: 100,
-  attack: 10,
-  acc: 80,
-  crit: 10,
-  potions: 3
-}
-
-const bossChar = {
-  name: "Dragon",
-  health: 100,
-  attack: 25,
-  acc: 70,
-  crit: 10,
-  position: ""
+//Enables combat buttons
+const enableCombatButtons = () => {
+  $("#attackButton").on("click", () => {console.log("Clicked Attack Button"); });
+  $("#healButton").on("click", () => {console.log("Clicked Heal Button"); });
+  $("#retreatButton").on("click", () => {console.log("Clicked retreat button"); });
+  $("#sleepButton").on("click", playerSleep);
 }
 
 //Pushes text to the text box
 const pushText = (text) => {
   $("#textBox").html( $("#textBox").html() + text);
+}
+
+const playerSleep = () => {
+  if(playerChar.inCombat){
+    pushText("You can not sleep with a monster in front of you.<br>");
+  } else {
+    pushText("You rest through the night and restore all of your health.<br><br>");
+    playerChar.health = playerChar.maxHealth;
+  }
 }
 
 const foundBoss = () => {
@@ -53,13 +51,19 @@ const updatePlayerText = () => {
 //Then reset the boss
 //Then update the player text in the HUD
 const resetPlayer = () => {
-  playerChar.health = 100;
-  playerChar.potions = 3;
+  playerChar.health = playerChar.maxHealth;
+  playerChar.potions = playerChar.maxPotions;
   resetBoss();
   updatePlayerText();
 }
 
 const usePotion = () => {
-  playerChar.health = 100;
-
+  if(playerChar.potion > 0){
+    pushText("You used a healing potion to restore your health.<br>");
+    playerChar.health = playerChar.maxHealth;
+    playerChar.potion--;
+    updatePlayerText();
+  } else {
+    pushText("You have no more potions.<br>");
+  }
 }

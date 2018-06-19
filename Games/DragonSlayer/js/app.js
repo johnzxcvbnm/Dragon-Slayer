@@ -113,17 +113,41 @@ const movePlayer = (x, y) => {
     fieldOfView();
     if(foundBoss()){
       pushText("You found the boss!");
-    }
+    } //Add random encounters here
   }
 }
 
 //Enables the movement buttons
+//If the player is in combat, push a message telling them they can't move
+//Else move the player
 const enableMoveButtons = () => {
-  $("#upButton").on("click", () => { movePlayer(0, -1) } );
-  $("#downButton").on("click", () => { movePlayer(0, 1) } );
-  $("#leftButton").on("click", () => { movePlayer(-1, 0) } );
-  $("#rightButton").on("click", () => { movePlayer(1, 0) } );
-  //disableCombatButtons;
+  $("#upButton").on("click", () => {
+    if(playerChar.inCombat){
+      pushText("You can not move while there is a monster in your way.<br><br>");
+    } else {
+      movePlayer(0, -1);
+    } } );
+
+  $("#downButton").on("click", () => {
+    if(playerChar.inCombat){
+      pushText("You can not move while there is a monster in your way.<br><br>");
+    } else {
+      movePlayer(0, 1);
+    } } );
+
+  $("#leftButton").on("click", () => {
+    if(playerChar.inCombat){
+      pushText("You can not move while there is a monster in your way.<br><br>");
+    } else {
+      movePlayer(-1, 0);
+    } } );
+
+  $("#rightButton").on("click", () => {
+    if(playerChar.inCombat){
+      pushText("You can not move while there is a monster in your way.<br><br>");
+    } else {
+      movePlayer(1, 0);
+  } } );
 }
 
 //Disables the movement buttons
@@ -141,6 +165,7 @@ const resetGame = () => {
   $("#textBox").html("The Princess has been kidnapped by a Dragon!  His lair is one of the other castles in the land.  Find him and rescue the Princess!<br><br>")
   generateDivs();
   enableMoveButtons();
+  enableCombatButtons();
   buildDefaultMap(playerPos);
   fieldOfView();
   resetPlayer();
