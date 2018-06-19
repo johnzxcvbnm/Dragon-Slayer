@@ -154,6 +154,7 @@ const enableMoveButtons = () => {
 
 //Reset the game to it's original position
 const resetGame = () => {
+  disableAllButtons();
   $("#playerName").text( prompt("Enter the name of your Champion: ") );
   $("#textBox").html("The Princess has been kidnapped by a Dragon!  His lair is one of the other castles in the land.  Find him and rescue the Princess!<br><br>")
   enableMoveButtons();

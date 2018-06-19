@@ -30,7 +30,7 @@ const bossChar = {
   name: "Dragon",
   health: 100,
   attack: 25,
-  acc: .7,
+  acc: .6,
   crit: .1,
   position: "",
   isBoss: true

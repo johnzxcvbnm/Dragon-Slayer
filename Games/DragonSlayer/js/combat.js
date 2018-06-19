@@ -3,6 +3,12 @@ const pushText = (text) => {
   $("#textBox").html( $("#textBox").html() + text);
 }
 
+//Function that updates all of the player text in the HUD
+const updatePlayerText = () => {
+  $("#playerHealth").text( playerChar.health );
+  $("#playerPotions").text( playerChar.potions );
+}
+
 //Disables all the movement and combat buttons
 //Used after the player has won or lost the game
 const disableAllButtons = () => {
@@ -21,6 +27,9 @@ const enableCombatButtons = () => {
   $("#attackButton").on("click", () => {
     if(playerChar.inCombat){
       playerAttack();
+      if(playerChar.inCombat){
+        enemyAttack();
+      }
     } else {
       pushText("You can not do that right now.<br><br>");
     } } );
@@ -28,11 +37,21 @@ const enableCombatButtons = () => {
   $("#healButton").on("click", () => {
     if(playerChar.inCombat){
       usePotion();
+      enemyAttack();
     } else {
       pushText("You can not do that right now.<br><br>");
     } } );
 
-  $("#retreatButton").on("click", () => {console.log("Clicked retreat button"); });
+  $("#retreatButton").on("click", () => {
+    if(playerChar.inCombat){
+      playerRetreat();
+      if(playerChar.inCombat){
+        enemyAttack();
+      }
+    } else {
+      pushText("You can not do that right now.<br><br>");
+    } } );
+
   $("#sleepButton").on("click", playerSleep);
 }
 
@@ -44,6 +63,11 @@ const playerHit = () => {
 //Function to determine if the player has landed a critical strike or not
 const playerCrit = () => {
   return Math.random() < playerChar.crit;
+}
+
+//Function to determine if the player has managed to run away
+const playerRun = () => {
+  return Math.random() < playerChar.run;
 }
 
 //Function to determine if the enemy has landed a hit or not
@@ -58,15 +82,17 @@ const enemyCrit = () => {
 
 const playerAttack = () => {
   //If the player lands a hit on the enemy
+  pushText(`You took a swing at the ${enemyChar.name} and...<br>`);
+
   if(playerHit()){
     //If the player lands a critical hit on the enemy it deals 3x damage
     if(playerCrit()){
-      pushText(`CRITICAL STRIKE!!!<br>Your attack dealt ${playerChar.attack * 3} damage!<br>`);
+      pushText(`...CRITICAL STRIKE!!!  Your attack dealt ${playerChar.attack * 3} damage!<br>`);
       enemyChar.health -= playerChar.attack * 3;
 
     //If the player deals regular damage to the enemy
     } else {
-      pushText(`You landed a blow dealing ${playerChar.attack} damage!<br>`);
+      pushText(`...you landed a blow, dealing ${playerChar.attack} damage!<br>`);
       enemyChar.health -= playerChar.attack;
     }
 
@@ -75,6 +101,7 @@ const playerAttack = () => {
       //If the player just beat the boss
       //Disable all the buttons and congradulate the player
       if(enemyChar.isBoss){
+        playerChar.inCombat = false;
         disableAllButtons();
         pushText("<br>You have slayed the dragon and resuced the princess!  Your epic tale will be told for generations to come!<br>");
 
@@ -85,8 +112,55 @@ const playerAttack = () => {
         pushText(`<br>You have slain ${enemyChar.name}. Good riddance.<br><br>`);
       }
     }
+
+  //If the player missed their attack
   } else {
-    pushText("You swing and missed!<br>");
+    pushText("...and missed!<br>");
+  }
+}
+
+//Enemy's attack turn
+const enemyAttack = () => {
+  pushText(`The ${enemyChar.name} attacks and...<br>`);
+
+  //If the enemy hit the player
+  if(enemyHit()){
+    //If the enemy lands a critical strike
+    if(enemyCrit()){
+      pushText(`...lands a CRITICAL STRIKE!!!  You took ${enemyChar.attack * 3} damage!<br>`);
+      playerChar.health -= enemyChar.attack * 3;
+    } else {
+      pushText(`...lands a blow!  You took ${enemyChar.attack} damage!<br>`);
+      playerChar.health -= enemyChar.attack;
+    }
+
+    updatePlayerText();
+
+    //If the player has died
+    if(playerChar.health <= 0){
+      disableAllButtons();
+      pushText("<br>You have died heroicly in battle.  Unfortunately the Dragon is still alive and begins a new age of darkness that will last for one hundred years!");
+
+      $(`#${playerPos[0]}-${playerPos[1]}`).empty();
+    }
+
+  //When the enemy misses
+  } else {
+    pushText(`...misses!<br>`);
+  }
+}
+
+//Function where the player runs away from battle
+//If they're successful, alert them and remove them from combat
+//Otherwise just alert them of their failure.
+const playerRetreat = () => {
+  pushText("You tried to run away and.....<br>");
+
+  if(playerRun()){
+    pushText("...managed to get away.<br><br>");
+    playerChar.inCombat = false;
+  } else {
+    pushText("...failed to get away.<br>");
   }
 }
 
@@ -130,11 +204,6 @@ const copyEnemy = (data) => {
   enemyChar.isBoss = data.isBoss;
 }
 
-//Function that updates all of the player text in the HUD
-const updatePlayerText = () => {
-  $("#playerHealth").text( playerChar.health );
-  $("#playerPotions").text( playerChar.potions );
-}
 
 //Reset the player to max health and potions
 //Then reset the boss
@@ -154,6 +223,6 @@ const usePotion = () => {
     playerChar.potions--;
     updatePlayerText();
   } else {
-    pushText("You have no more potions.<br>");
+    pushText("You look for a potion, but alas you just wasted your time for you have no more potions.<br>");
   }
 }
