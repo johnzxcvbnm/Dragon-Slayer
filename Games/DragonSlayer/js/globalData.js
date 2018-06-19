@@ -21,7 +21,8 @@ const enemyChar = {
   health: 0,
   attack: 0,
   acc: 0,
-  crit: 0
+  crit: 0,
+  isBoss: false
 }
 
 //The boss of the game
@@ -31,5 +32,6 @@ const bossChar = {
   attack: 25,
   acc: .7,
   crit: .1,
-  position: ""
+  position: "",
+  isBoss: true
 }

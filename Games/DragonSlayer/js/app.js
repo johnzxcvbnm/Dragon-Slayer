@@ -112,7 +112,9 @@ const movePlayer = (x, y) => {
     playerPos[1] += y;
     fieldOfView();
     if(foundBoss()){
-      pushText("You found the boss!");
+      pushText("You found the Dragon's Lair.  Unfortunately for you the Dragon has also found you.  Get ready for a fight!<br><br>");
+      playerChar.inCombat = true;
+      copyEnemy(bossChar);
     } //Add random encounters here
   }
 }
@@ -163,8 +165,8 @@ const resetGame = () => {
 
 //Document Ready function
 $( () => {
-  generateDivs();
-  enableMiscButtons();
-  resetGame();
-  //Enable misc buttons
+  //Functions that only need to be called once
+  generateDivs(); //Generate the squares which make up the map
+  enableMiscButtons(); //Enables the misc buttons for the rest of the game
+  resetGame(); //Resets the game for start it off
 });//End of Document Ready Function
