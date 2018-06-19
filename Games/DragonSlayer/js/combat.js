@@ -1,3 +1,16 @@
+//Disables all the movement and combat buttons
+//Used after the player has won or lost the game
+const disableAllButtons = () => {
+  $("#attackButton").off();
+  $("#healButton").off();
+  $("#retreatButton").off();
+  $("#sleepButton").off();
+  $("#upButton").off();
+  $("#downButton").off();
+  $("#leftButton").off();
+  $("#rightButton").off();
+}
+
 //Enables combat buttons
 const enableCombatButtons = () => {
   $("#attackButton").on("click", () => {console.log("Clicked Attack Button"); });

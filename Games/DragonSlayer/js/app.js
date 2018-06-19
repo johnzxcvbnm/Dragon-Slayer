@@ -150,20 +150,10 @@ const enableMoveButtons = () => {
   } } );
 }
 
-//Disables the movement buttons
-//Used so you can't move in combat or after win/lose conditions
-const disableMoveButtons = () => {
-  $("#upButton").off();
-  $("#downButton").off();
-  $("#leftButton").off();
-  $("#rightButton").off();
-}
-
 //Reset the game to it's original position
 const resetGame = () => {
   $("#playerName").text( prompt("Enter the name of your Champion: ") );
   $("#textBox").html("The Princess has been kidnapped by a Dragon!  His lair is one of the other castles in the land.  Find him and rescue the Princess!<br><br>")
-  generateDivs();
   enableMoveButtons();
   enableCombatButtons();
   buildDefaultMap(playerPos);
@@ -173,6 +163,8 @@ const resetGame = () => {
 
 //Document Ready function
 $( () => {
+  generateDivs();
+  enableMiscButtons();
   resetGame();
   //Enable misc buttons
 });//End of Document Ready Function
