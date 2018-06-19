@@ -12,7 +12,7 @@
 // mainSection (class)
 
 //Players current position in the map and image
-const playerPos = [15, 15];
+// const playerPos = [15, 15];
 const $playerImg = $("<img>").attr("src", "tiles/playerTile.png");
 
 //Random background colors.  Used for building the fieldOfView function
@@ -111,6 +111,9 @@ const movePlayer = (x, y) => {
     playerPos[0] += x;
     playerPos[1] += y;
     fieldOfView();
+    if(foundBoss()){
+      pushText("You found the boss!");
+    }
   }
 }
 
@@ -120,6 +123,7 @@ const enableMoveButtons = () => {
   $("#downButton").on("click", () => { movePlayer(0, 1) } );
   $("#leftButton").on("click", () => { movePlayer(-1, 0) } );
   $("#rightButton").on("click", () => { movePlayer(1, 0) } );
+  //disableCombatButtons;
 }
 
 //Disables the movement buttons
@@ -133,10 +137,13 @@ const disableMoveButtons = () => {
 
 //Reset the game to it's original position
 const resetGame = () => {
+  $("#playerName").text( prompt("Enter the name of your Champion: ") );
+  $("#textBox").html("The Princess has been kidnapped by a Dragon!  His lair is one of the other castles in the land.  Find him and rescue the Princess!<br><br>")
   generateDivs();
   enableMoveButtons();
   buildDefaultMap(playerPos);
   fieldOfView();
+  resetPlayer();
 }
 
 //Document Ready function
