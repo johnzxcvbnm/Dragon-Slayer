@@ -23,19 +23,20 @@ const randomColor = () => {
   return `rgb(${red}, ${blue}, ${green})`;
 }
 
+//-------Moved to the top of combat.js ------//
 //Generates the new field of view
-const fieldOfView = () => {
-  $(".square").hide();
-
-  for(let i = playerPos[0] - 7; i <= playerPos[0] + 7; i++){
-    for(let x = playerPos[1] - 4; x <= playerPos[1] + 4; x++){
-      $(`#${i}-${x}`).show();
-    }
-  }
-
-  //Moves the player's icon to their new position
-  $playerImg.appendTo( $(`#${playerPos[0]}-${playerPos[1]}`) );
-}
+// const fieldOfView = () => {
+//   $(".square").hide();
+//
+//   for(let i = playerPos[0] - 7; i <= playerPos[0] + 7; i++){
+//     for(let x = playerPos[1] - 4; x <= playerPos[1] + 4; x++){
+//       $(`#${i}-${x}`).show();
+//     }
+//   }
+//
+//   //Moves the player's icon to their new position
+//   $playerImg.appendTo( $(`#${playerPos[0]}-${playerPos[1]}`) );
+// }
 
 //Creates the whole map and appends it to the container.  All squares are given a cordinate as an ID, which is used to create a map with function.
 const generateDivs = () => {
@@ -49,6 +50,12 @@ const generateDivs = () => {
         $(".mainSection").append($mySquare);
       }
     }
+
+
+    const $myEnemyBox = $("<div>").attr("id", "enemyBox");
+    $myEnemyBox.append( $("<img>").attr("id", "enemyImg") );
+    $myEnemyBox.hide();
+    $(".mainSection").append($myEnemyBox);
 
     // terrainCheck();
     fieldOfView();
@@ -115,6 +122,7 @@ const movePlayer = (x, y) => {
       pushText("You found the Dragon's Lair.  Unfortunately for you the Dragon has also found you.  Get ready for a fight!<br><br>");
       playerChar.inCombat = true;
       copyEnemy(bossChar);
+      showEnemy();
     } //Add random encounters here
   }
 }

@@ -3,6 +3,27 @@ const pushText = (text) => {
   $("#textBox").html( $("#textBox").html() + text);
 }
 
+//Generates the new field of view
+const fieldOfView = () => {
+  $("#enemyBox").hide();
+  $(".square").hide();
+
+  for(let i = playerPos[0] - 7; i <= playerPos[0] + 7; i++){
+    for(let x = playerPos[1] - 4; x <= playerPos[1] + 4; x++){
+      $(`#${i}-${x}`).show();
+    }
+  }
+
+  //Moves the player's icon to their new position
+  $playerImg.appendTo( $(`#${playerPos[0]}-${playerPos[1]}`) );
+}
+
+const showEnemy = () => {
+  $(".square").hide();
+  $("#enemyBox").show();
+  $("#enemyImg").attr("src", enemyChar.image);
+}
+
 //Function that updates all of the player text in the HUD
 const updatePlayerText = () => {
   $("#playerHealth").text( playerChar.health );
@@ -102,6 +123,7 @@ const playerAttack = () => {
       //Disable all the buttons and congradulate the player
       if(enemyChar.isBoss){
         playerChar.inCombat = false;
+        fieldOfView();
         disableAllButtons();
         pushText("<br>You have slayed the dragon and resuced the princess!  Your epic tale will be told for generations to come!<br>");
 
@@ -110,6 +132,7 @@ const playerAttack = () => {
       } else {
         playerChar.inCombat = false;
         pushText(`<br>You have slain ${enemyChar.name}. Good riddance.<br><br>`);
+        fieldOfView();
       }
     }
 
@@ -159,6 +182,7 @@ const playerRetreat = () => {
   if(playerRun()){
     pushText("...managed to get away.<br><br>");
     playerChar.inCombat = false;
+    fieldOfView();
   } else {
     pushText("...failed to get away.<br>");
   }
@@ -202,6 +226,7 @@ const copyEnemy = (data) => {
   enemyChar.acc = data.acc;
   enemyChar.crit = data.crit;
   enemyChar.isBoss = data.isBoss;
+  enemyChar.image = data.image;
 }
 
 
@@ -212,6 +237,7 @@ const resetPlayer = () => {
   playerChar.health = playerChar.maxHealth;
   playerChar.potions = playerChar.maxPotions;
   playerChar.inCombat = false;
+  fieldOfView();
   resetBoss();
   updatePlayerText();
 }

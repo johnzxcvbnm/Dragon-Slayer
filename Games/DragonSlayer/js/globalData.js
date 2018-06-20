@@ -22,16 +22,57 @@ const enemyChar = {
   attack: 0,
   acc: 0,
   crit: 0,
-  isBoss: false
+  isBoss: false,
+  image: ""
 }
 
 //The boss of the game
 const bossChar = {
   name: "Dragon",
-  health: 100,
+  health: 120,
   attack: 25,
-  acc: .6,
+  acc: .7,
   crit: .1,
   position: "",
-  isBoss: true
+  isBoss: true,
+  image: "tiles/dragonTile.png"
+}
+
+//Common enemy - Slime
+//Low hp, low damage but high acc
+//Most common enemy but is ment to wear down the player
+const slime {
+  name: "Slime",
+  health: 20,
+  attack: 5,
+  acc: .9,
+  crit: .1,
+  isBoss: false,
+  image: "tiles/slimeTile.png"
+}
+
+//Common enemy - Evil Wizard
+//Low acc, but high crit
+//Mid range enemy ment to keep the player on their toes
+const wizard {
+  name: "Evil Wizard",
+  health: 40,
+  attack: 7,
+  acc: .6,
+  crit: .3,
+  isBoss: false,
+  image: "tiles/wizardTile.png"
+}
+
+//Common enemy - Skeleton
+//High attack, high acc, mid crit
+//Most danagerous of the common enemys, ment to try to force the player to use a potion
+const skeleton {
+  name: "Skeleton",
+  health: 50,
+  attack: 10,
+  acc: .85,
+  crit: .20,
+  isBoss: false,
+  image: "tiles/skeletonTile.png"
 }

@@ -149,3 +149,20 @@ h5 {
   /* background-color: #000000; */
   background-image: url("../tiles/townTile.png");
 }
+
+/**********************************
+*****   Enemy Picture CSS     *****
+**********************************/
+
+
+#enemyBox {
+  width: 750px;
+  height: 450px;
+  background-color: black;
+}
+
+#enemyBox > img {
+  display: block;
+  width: 400px;
+  margin: auto;
+}
