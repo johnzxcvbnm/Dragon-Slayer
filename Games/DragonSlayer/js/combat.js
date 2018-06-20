@@ -103,14 +103,13 @@ const enemyCrit = () => {
 
 //Function to determine if the player has run into a random encounter
 const enemyEncounter = () => {
-  return Math.random() < .10;
+  return Math.random() < .075;
 }
 
 //Function to determine who the player ran into during a random encounter
 const enemySelect = () => {
   const myNum = Math.floor(Math.random() * 5);
 
-  // return wizard;
   switch(myNum){
     case 0: return skeleton;
     case 1:
