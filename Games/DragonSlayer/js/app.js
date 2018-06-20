@@ -118,12 +118,26 @@ const movePlayer = (x, y) => {
     playerPos[0] += x;
     playerPos[1] += y;
     fieldOfView();
+
+    //If the player found the boss, begin the boss battle
     if(foundBoss()){
-      pushText("You found the Dragon's Lair.  Unfortunately for you the Dragon has also found you.  Get ready for a fight!<br><br>");
+      pushText("You found the Dragon's Lair.  Unfortunately for you the Dragon has also found you.  Get ready for a fight!<br>");
       playerChar.inCombat = true;
       copyEnemy(bossChar);
       showEnemy();
-    } //Add random encounters here
+
+    //If the player has found a castle that doesn't have the boss, alert them that there's nothing there for them
+    } else if( $(`#${playerPos[0]}-${playerPos[1]}`).hasClass("towns") ){
+      pushText("This castle is abandoned.  There nothing here for you.<br><br>");
+
+    //If the player has encounted a random monster
+    } else if( enemyEncounter() ){
+      playerChar.inCombat = true;
+      copyEnemy( enemySelect() );
+      pushText(`You've run into a ${enemyChar.name}!  Prepare for a fight!<br>`);
+      showEnemy();
+
+    }
   }
 }
 
@@ -133,28 +147,28 @@ const movePlayer = (x, y) => {
 const enableMoveButtons = () => {
   $("#upButton").on("click", () => {
     if(playerChar.inCombat){
-      pushText("You can not move while there is a monster in your way.<br><br>");
+      pushText("You can not move while there is a monster in your way.<br>");
     } else {
       movePlayer(0, -1);
     } } );
 
   $("#downButton").on("click", () => {
     if(playerChar.inCombat){
-      pushText("You can not move while there is a monster in your way.<br><br>");
+      pushText("You can not move while there is a monster in your way.<br>");
     } else {
       movePlayer(0, 1);
     } } );
 
   $("#leftButton").on("click", () => {
     if(playerChar.inCombat){
-      pushText("You can not move while there is a monster in your way.<br><br>");
+      pushText("You can not move while there is a monster in your way.<br>");
     } else {
       movePlayer(-1, 0);
     } } );
 
   $("#rightButton").on("click", () => {
     if(playerChar.inCombat){
-      pushText("You can not move while there is a monster in your way.<br><br>");
+      pushText("You can not move while there is a monster in your way.<br>");
     } else {
       movePlayer(1, 0);
   } } );

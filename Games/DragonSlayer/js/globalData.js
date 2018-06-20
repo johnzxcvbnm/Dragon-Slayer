@@ -41,7 +41,7 @@ const bossChar = {
 //Common enemy - Slime
 //Low hp, low damage but high acc
 //Most common enemy but is ment to wear down the player
-const slime {
+const slime = {
   name: "Slime",
   health: 20,
   attack: 5,
@@ -54,12 +54,12 @@ const slime {
 //Common enemy - Evil Wizard
 //Low acc, but high crit
 //Mid range enemy ment to keep the player on their toes
-const wizard {
+const wizard = {
   name: "Evil Wizard",
   health: 40,
   attack: 7,
-  acc: .6,
-  crit: .3,
+  acc: .8,
+  crit: .4,
   isBoss: false,
   image: "tiles/wizardTile.png"
 }
@@ -67,9 +67,9 @@ const wizard {
 //Common enemy - Skeleton
 //High attack, high acc, mid crit
 //Most danagerous of the common enemys, ment to try to force the player to use a potion
-const skeleton {
+const skeleton = {
   name: "Skeleton",
-  health: 50,
+  health: 80,
   attack: 10,
   acc: .85,
   crit: .20,
