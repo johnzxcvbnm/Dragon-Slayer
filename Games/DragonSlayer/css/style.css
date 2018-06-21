@@ -1,5 +1,11 @@
 html {
-  /* background-color: black; */
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 40px;
 }
 
 h1, h3 {
@@ -38,7 +44,7 @@ h5 {
 .sideBar {
   width: 250px;
   height: 602px;
-  border: 2px solid black;
+  border: 2px solid white;
 }
 
 .miscButtons, .moveButtons {
@@ -53,10 +59,20 @@ h5 {
   width: 246px;
   margin: 2px;
   height: 40px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 15px;
 }
 
 .button:hover {
   background-color: #C3C3C2;
+}
+
+#attackButton, #healButton, #sleepButton {
+  font-size: 13px;
+}
+
+#retreatButton {
+  font-size: 12px;
 }
 
 .sideBySide {
@@ -87,7 +103,7 @@ h5 {
 .mainSection {
   width: 750px;
   height: 450px;
-  border: 2px solid black;
+  border: 2px solid white;
   border-bottom: 0px;
   border-left: 0px;
   display: flex;
@@ -101,7 +117,7 @@ h5 {
 .bottomSection {
   width: 750px;
   height: 150px;
-  border: 2px solid black;
+  border: 2px solid white;
   border-left: 0px;
   overflow-y: auto;
 }
