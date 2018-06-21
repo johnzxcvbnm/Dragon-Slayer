@@ -96,6 +96,13 @@ h5 {
   height: 44px;
 }
 
+.playerStuff {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
 /**********************************
 *****   Map Container CSS   *******
 **********************************/
@@ -124,6 +131,10 @@ h5 {
 
 #textBox {
   padding: 20px 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 /**********************************

@@ -120,17 +120,18 @@ const enemySelect = () => {
 
 const playerAttack = () => {
   //If the player lands a hit on the enemy
-  pushText(`You took a swing at the ${enemyChar.name} and...<br>`);
+  pushText(`You took a swing and`);
+  // pushText(`You took a swing at the ${enemyChar.name} and`);
 
   if(playerHit()){
     //If the player lands a critical hit on the enemy it deals 3x damage
     if(playerCrit()){
-      pushText(`...CRITICAL STRIKE!!!  Your attack dealt ${playerChar.attack * 3} damage!<br>`);
+      pushText(`....CRITICAL STRIKE!!!  You dealt ${playerChar.attack * 3} damage!<br>`);
       enemyChar.health -= playerChar.attack * 3;
 
     //If the player deals regular damage to the enemy
     } else {
-      pushText(`...you landed a blow, dealing ${playerChar.attack} damage!<br>`);
+      pushText(`....you landed a blow, dealing ${playerChar.attack} damage!<br>`);
       enemyChar.health -= playerChar.attack;
     }
 
@@ -148,29 +149,29 @@ const playerAttack = () => {
       //Congradulate the player and remove them from combat
       } else {
         playerChar.inCombat = false;
-        pushText(`<br>You have slain ${enemyChar.name}. Good riddance.<br><br>`);
+        pushText(`You have slain ${enemyChar.name}. Good riddance.<br><br>`);
         fieldOfView();
       }
     }
 
   //If the player missed their attack
   } else {
-    pushText("...and missed!<br>");
+    pushText("....and missed!<br>");
   }
 }
 
 //Enemy's attack turn
 const enemyAttack = () => {
-  pushText(`The ${enemyChar.name} attacks and...<br>`);
+  pushText(`The ${enemyChar.name} attacks and`);
 
   //If the enemy hit the player
   if(enemyHit()){
     //If the enemy lands a critical strike
     if(enemyCrit()){
-      pushText(`...lands a CRITICAL STRIKE!!!  You took ${enemyChar.attack * 3} damage!<br>`);
+      pushText(`....CRITICAL STRIKE!!!  You took ${enemyChar.attack * 3} damage!<br>`);
       playerChar.health -= enemyChar.attack * 3;
     } else {
-      pushText(`...lands a blow!  You took ${enemyChar.attack} damage!<br>`);
+      pushText(`....lands a blow!  You took ${enemyChar.attack} damage!<br>`);
       playerChar.health -= enemyChar.attack;
     }
 
@@ -186,7 +187,7 @@ const enemyAttack = () => {
 
   //When the enemy misses
   } else {
-    pushText(`...misses!<br>`);
+    pushText(`....misses!<br>`);
   }
 }
 
@@ -194,7 +195,7 @@ const enemyAttack = () => {
 //If they're successful, alert them and remove them from combat
 //Otherwise just alert them of their failure.
 const playerRetreat = () => {
-  pushText("You tried to run away and.....<br>");
+  pushText("You tried to run away and...");
 
   if(playerRun()){
     pushText("...managed to get away.<br><br>");
