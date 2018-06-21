@@ -22,4 +22,5 @@ const aboutModal = () => {
 const playModal = () => {
   $("#modal").show(400);
   $("#modal-playTextbox").show(400);
+  $("#modal-playTextbox").attr("diplay", "flex");
 }
