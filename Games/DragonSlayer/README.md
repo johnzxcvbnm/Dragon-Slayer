@@ -6,7 +6,9 @@
 <p><a href="#theMap">The Map</a></p>
 <p><a href="#combat">Combat</a></p>
 <p><a href="#stats">Stats</a></p>
+<p><a href="#specialCommands">Special Commands</a></p>
 <p><a href="#links">Links</a></p>
+
 
 <hr id="storyAndGameplay">
 <h2>Story and Gameplay</h2>
@@ -89,6 +91,20 @@ Critical Chance: 10%<br>
 Chance to Encounter: 100%<br>
 
 The Dragon is the boss of the game.  Beat him and you win.  He will always be in one of the castles on the map (randomly chosen), no where else.  I designed the boss to be a challenge.  On average, I needed two or three potions just to MAYBE beat him, which is why it's important to hold onto as many potions as you can.  Even if you do good he can still crit you for a devastating 75 damage, which will more than likely kill you.
+
+<hr id="specialCommands">
+<h2>Special Commands</h2>
+
+As part of my own personal stretch goal, I created and enabled some special commands.  When the game first loads, there's a prompt for you to enter a name.  If you enter a certain names, you get some special effects.
+
+EasyMode
+This is the same as the base game, except that your base attack is 50 instead of 10.  This makes short work for the common enemies, but there's still a slight chance the boss could kill you.  This effect is removed if the game is restarted.
+
+HardMode
+There are only two changes to this mode of the game.  First I disable the sleep button.  If you try to click it, all you will get is some text saying that it's been disabled.  The second change is that I doubled your starting potions.  It makes it possible to beat if you have more potions.  In my testing I still ended up using 5-6 potions when I was able to beat it (the boss still killed me several times).
+
+Link
+This is actually a throwback to the old Zelda games on the NES.  When you name your character Link in the original Zelda, you start a new game, but on the second quest, where everything has moved around.  In my game, when you enter your character name as Link, it's loads a second map thats playable.  The theme I had in mind when I created the second map, I wanted most of it to be desert and mountains.  There's also one less castle (3 for the boss to spawn in), but it's a long walk to all of the castles.
 
 <hr id="links">
 <h2>Links</h2>
