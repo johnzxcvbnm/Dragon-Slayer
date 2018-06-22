@@ -3,6 +3,9 @@
 //-----------By John Kusching--------------//
 //-----------------------------------------//
 
+//File contains all the functions necessary to build the second map.
+//Contains only the raw data needed to build this specific map.
+
 //All functions return an array of cordinates which determine which squares are what
 
 //Function Names
@@ -39,9 +42,11 @@ const secondTownsBuild = () => {
   return ["38-7",  "25-21",  "10-40",  "42-45"];
 }
 
+//Sets the default position of the player on the map
+//Also sets the starting location of the map in a seperate variable
 const secondPlayerPos = (playerPos) => {
   playerPos[0] = 25;
   playerPos[1] = 21;
   startingPos[0] = playerPos[0];
-    startingPos[1] = playerPos[1];
+  startingPos[1] = playerPos[1];
 }

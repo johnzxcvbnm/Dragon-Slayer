@@ -1,7 +1,16 @@
+
 //File contains all the global variables used in the program
+
+// Function Names
+// File has no functions
+
 //Variable used to track the player's position using the cordinate system
 const playerPos = [15, 15];
+//Variable used to track the players starting point in the map.  Only used in the senario that the player re-visits the begining castle
 const startingPos = [15, 15];
+
+//Where the player icon is stored
+const $playerImg = $("<img>").attr("src", "tiles/playerTile.png");
 
 //Players stats, used for combat
 const playerChar = {
@@ -17,6 +26,8 @@ const playerChar = {
 }
 
 //Who the player is fighting against
+//Enemy data is copied from one of the below objects then the player fights this object
+//Used so the original enemy data is untouched
 const enemyChar = {
   name: "",
   health: 0,

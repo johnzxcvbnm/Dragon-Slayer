@@ -3,6 +3,9 @@
 //-----------By John Kusching--------------//
 //-----------------------------------------//
 
+//File contains all the functions necessary to build the default map.
+//Contains only the raw data needed to build this specific map.
+
 //All functions return an array of cordinates which determine which squares are what
 
 //Function Names
@@ -39,6 +42,8 @@ const defaultTownsBuild = () => {
   return ["37-6",  "15-15",  "29-23",  "35-41",  "20-44"];
 }
 
+//Sets the default position of the player on the map
+//Also sets the starting location of the map in a seperate variable
 const defaultPlayerPos = (playerPos) => {
   playerPos[0] = 35;
   playerPos[1] = 41;

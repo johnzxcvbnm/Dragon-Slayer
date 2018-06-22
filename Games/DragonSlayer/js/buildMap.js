@@ -1,4 +1,12 @@
 
+//File contains generic functions to build maps.
+//This is used in conjunction to the raw map data and the built in coordinate system to build maps
+
+// Function Names
+// buildMap(water, plains, forest, mountains, desert, towns)
+// buildDefaultMap(playerPos)
+// buildSecondMap(playerPos)
+
 //Function to build a map using the cordinate system
 const buildMap = (water, plains, forest, mountains, desert, towns) => {
   for(let cord of water){

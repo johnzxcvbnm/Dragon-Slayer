@@ -1,8 +1,18 @@
 
+//File contains all the fucntions related to building the generic squares and player movement
 
-//Players current position in the map and image
-// const playerPos = [15, 15];
-const $playerImg = $("<img>").attr("src", "tiles/playerTile.png");
+// Function Names
+
+// randomColor()
+// generateDivs()
+// terrainCheck
+// canMove(x, y)
+// movePlayer(x, y)
+// enableMoveButtons()
+// cheatCheck()
+// resetGame()
+// () - Document Ready Function
+
 
 //Random background colors.  Used for building the fieldOfView function
 const randomColor = () => {
@@ -47,6 +57,8 @@ const generateDivs = () => {
     $(".mainSection").append($myEnemyBox);
 
     // terrainCheck();
+
+    //Render the players field of view
     fieldOfView();
 
   //Used to test if the squares would fit into the container
@@ -169,6 +181,7 @@ const enableMoveButtons = () => {
 //Function to enable certain things in the game.
 //Depending on what name they enter it does different things
 const cheatCheck = () => {
+  //Enables HardMode where the player can not use the sleep button during the game, but they are given double potions
   if( $("#playerName").text() === "HardMode" ){
     // console.log("Enable Hard Mode");
     alert("Hard Mode Enabled.  You have more potions, but you can not sleep.");
@@ -178,13 +191,15 @@ const cheatCheck = () => {
     $("#sleepButton").on("click", () => { pushText("You can not sleep in hard mode.<br><br>"); });
   }
 
+  //Enables EasyMode where the player hase 5x their normal strength
   else if( $("#playerName").text() === "EasyMode"){
     alert("Easy Mode Enabled.  You now have 5x base attack!")
     playerChar.attack = 50;
   }
 
+  //Enables a second map for the player to play on
   else if( $("#playerName").text() === "Link" ){
-    console.log("New Game Plus!");
+    // console.log("New Game Plus!");
     alert("Hey!  Listen!  A new map!");
     buildSecondMap(playerPos);
     fieldOfView();
@@ -212,3 +227,5 @@ $( () => {
   enableMiscButtons(); //Enables the misc buttons for the rest of the game
   resetGame(); //Resets the game for start it off
 });//End of Document Ready Function
+
+// 229 + 57 + 343 + 52 + 90 + 38 + 52 + 268 + 195 + 128 + 31 + 87 = 1570 lines
