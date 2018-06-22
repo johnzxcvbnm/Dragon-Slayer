@@ -39,11 +39,11 @@ const buildDefaultMap = (playerPos) => {
 
 //Build the second map - by John Kusching
 const buildSecondMap = (playerPos) => {
-  // secondPlayerPos(playerPos);
-  // buildMap(secondWaterBuild(),
-  //          secondPlainsBuild(),
-  //          secondForestBuild(),
-  //          secondMountainsBuild(),
-  //          secondDesertBuild(),
-  //          secondTownsBuild() );
+  secondPlayerPos(playerPos);
+  buildMap(secondWaterBuild(),
+           secondPlainsBuild(),
+           secondForestBuild(),
+           secondMountainsBuild(),
+           secondDesertBuild(),
+           secondTownsBuild() );
 }

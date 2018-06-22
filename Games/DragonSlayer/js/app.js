@@ -1,15 +1,4 @@
-// textBox
-// sleepButton
-// retreatButton
-// healButton
-// attackButton
-// playerPotions
-// playerHealth
-// playerName
-// resetButton
-// howToPlayButton
-// aboutButton
-// mainSection (class)
+
 
 //Players current position in the map and image
 // const playerPos = [15, 15];
@@ -51,7 +40,7 @@ const generateDivs = () => {
       }
     }
 
-
+    //Creates a div to hold the enemy picture during combat.  Div only appears during combat.
     const $myEnemyBox = $("<div>").attr("id", "enemyBox");
     $myEnemyBox.append( $("<img>").attr("id", "enemyImg") );
     $myEnemyBox.hide();
@@ -199,6 +188,7 @@ const cheatCheck = () => {
     alert("Hey!  Listen!  A new map!");
     buildSecondMap(playerPos);
     fieldOfView();
+    resetBoss();
   }
 }
 

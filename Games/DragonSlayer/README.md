@@ -41,7 +41,7 @@ Critical hits in the game multiply the base attack by three.
 <h2>Stats</h2>
 
 These are the exact stats for the player and the monsters in the game.
-
+<br><br>
 --------Player--------<br>
 Max Health: 100<br>
 Base Attack: 10<br>
@@ -52,8 +52,7 @@ Max Potions: 3<br>
 Chance for Random Encounters: 7.5%<br>
 
 Basic player stats.  I wanted to make a mid-grade player, able to take on smaller enemies without any problems, but not able to easily take on the boss.  The player only has a certain number of potions in the game.  They can not find any more so they need to use them sparingly if they're going to beat the game.
-
-
+<br><br>
 --------Slime--------<br>
 Health: 20<br>
 Base Attack: 5<br>
@@ -62,8 +61,7 @@ Critical Chance: 10%<br>
 Chance to Encounter: 40%<br>
 
 The slime is the easiest enemy in the game.  I designed him to be a push over for the player.  A low level threat.
-
-
+<br><br>
 --------Wizard--------<br>
 Health: 40<br>
 Attack: 7<br>
@@ -73,8 +71,7 @@ Critical Chance: 40%<br>
 Chance to Encounter: 40%<br>
 
 The wizard is designed to be a mid level threat against the player.  With a high chance of landing critical attacks he can wear away the players health quickly if they're unlucky.  He's job is to take some HP off of the player to force him the use a potion or sleep after battle.
-
-
+<br><br>
 --------Skeleton--------<br>
 Health: 80<br>
 Base Attack: 10<br>
@@ -83,8 +80,7 @@ Critical Chance: 20%<br>
 Chance to Encounter: 20%<br>
 
 The Skeleton was modeled to be similar to the player in terms of stats.  He is designed to force the player to use a potion every time he runs into the player, which the player can not replenish.  This is also why I lowered the chance of running into him, vs the other monsters.  It's usually a better choice to run away from the skeleton instead of fighting him.
-
-
+<br><br>
 --------Dragon--------<br>
 Health: 120<br>
 Attack: 25<br>
