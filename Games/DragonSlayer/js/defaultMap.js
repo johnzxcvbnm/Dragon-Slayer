@@ -42,4 +42,6 @@ const defaultTownsBuild = () => {
 const defaultPlayerPos = (playerPos) => {
   playerPos[0] = 35;
   playerPos[1] = 41;
+  startingPos[0] = playerPos[0];
+  startingPos[1] = playerPos[1];
 }

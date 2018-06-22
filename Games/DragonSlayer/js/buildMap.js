@@ -26,7 +26,6 @@ const buildMap = (water, plains, forest, mountains, desert, towns) => {
   }
 }
 
-
 //Build the default map - by John Kusching
 const buildDefaultMap = (playerPos) => {
   defaultPlayerPos(playerPos);
@@ -36,4 +35,15 @@ const buildDefaultMap = (playerPos) => {
            defaultMountainsBuild(),
            defaultDesertBuild(),
            defaultTownsBuild() );
+}
+
+//Build the second map - by John Kusching
+const buildSecondMap = (playerPos) => {
+  // secondPlayerPos(playerPos);
+  // buildMap(secondWaterBuild(),
+  //          secondPlainsBuild(),
+  //          secondForestBuild(),
+  //          secondMountainsBuild(),
+  //          secondDesertBuild(),
+  //          secondTownsBuild() );
 }

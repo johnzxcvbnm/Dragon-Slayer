@@ -152,12 +152,13 @@ h5 {
   font-weight: 600;
   letter-spacing: 1px;
   display: none;
+  overflow-y: auto;
 }
 
 #modal-playTextbox {
   /* display: flex; */
   flex-wrap: wrap;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 #modal-footer {

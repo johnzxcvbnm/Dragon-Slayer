@@ -256,6 +256,7 @@ const resetPlayer = () => {
   playerChar.health = playerChar.maxHealth;
   playerChar.potions = playerChar.maxPotions;
   playerChar.inCombat = false;
+  playerChar.attack = 10;
   fieldOfView();
   resetBoss();
   updatePlayerText();

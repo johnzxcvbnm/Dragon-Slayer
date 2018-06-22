@@ -126,6 +126,10 @@ const movePlayer = (x, y) => {
       copyEnemy(bossChar);
       showEnemy();
 
+    //If the player walks back onto the starting castle, alert them that they can't do anything there
+    } else if( (playerPos[0] == startingPos[0]) && (playerPos[1] == startingPos[1]) ){
+      pushText("You can not return home without the princess");
+
     //If the player has found a castle that doesn't have the boss, alert them that there's nothing there for them
     } else if( $(`#${playerPos[0]}-${playerPos[1]}`).hasClass("towns") ){
       pushText("This castle is abandoned.  There nothing here for you.<br><br>");
@@ -136,7 +140,6 @@ const movePlayer = (x, y) => {
       copyEnemy( enemySelect() );
       pushText(`You've run into a ${enemyChar.name}!  Prepare for a fight!<br>`);
       showEnemy();
-
     }
   }
 }
@@ -174,16 +177,42 @@ const enableMoveButtons = () => {
   } } );
 }
 
+//Function to enable certain things in the game.
+//Depending on what name they enter it does different things
+const cheatCheck = () => {
+  if( $("#playerName").text() === "HardMode" ){
+    // console.log("Enable Hard Mode");
+    alert("Hard Mode Enabled.  You have more potions, but you can not sleep.");
+    playerChar.potions = 6;
+    updatePlayerText();
+    $("#sleepButton").off();
+    $("#sleepButton").on("click", () => { pushText("You can not sleep in hard mode.<br><br>"); });
+  }
+
+  else if( $("#playerName").text() === "EasyMode"){
+    alert("Easy Mode Enabled.  You now have 5x base attack!")
+    playerChar.attack = 50;
+  }
+
+  else if( $("#playerName").text() === "Link" ){
+    console.log("New Game Plus!");
+    alert("Hey!  Listen!  A new map!");
+    buildSecondMap(playerPos);
+    fieldOfView();
+  }
+}
+
 //Reset the game to it's original position
 const resetGame = () => {
   disableAllButtons();
-  $("#playerName").text( prompt("Enter the name of your Champion: ") );
-  $("#textBox").html("The Princess has been kidnapped by a Dragon!  His lair is one of the other castles in the land.  Find him and rescue the Princess!<br><br>")
   enableMoveButtons();
   enableCombatButtons();
   buildDefaultMap(playerPos);
   fieldOfView();
   resetPlayer();
+  $("#playerName").text( prompt("Enter the name of your Champion: ") );
+  $("#textBox").html("The Princess has been kidnapped by a Dragon!  His lair is one of the other castles in the land.  Find him and rescue the Princess!<br><br>")
+  cheatCheck();
 }
 
 //Document Ready function

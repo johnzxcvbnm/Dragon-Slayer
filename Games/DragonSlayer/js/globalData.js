@@ -1,6 +1,7 @@
 //File contains all the global variables used in the program
 //Variable used to track the player's position using the cordinate system
 const playerPos = [15, 15];
+const startingPos = [15, 15];
 
 //Players stats, used for combat
 const playerChar = {
