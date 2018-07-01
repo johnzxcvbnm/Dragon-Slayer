@@ -1,0 +1,68 @@
+html {
+  background: thistle;
+}
+
+div {
+  border: 1px solid gold;
+  box-sizing: border-box;
+  /* width: 100px;
+  height: 100px; */
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+.upButton, .downButton {
+  min-width: 50px;
+  min-height: 50px;
+  width: 100%;
+  height: 15%;
+}
+
+.middleWrapper {
+  min-width: 300px;
+  min-height: 200px;
+  width: 100%;
+  height: 70%;
+  display: flex;
+}
+
+.leftWrapper, .rightWrapper {
+  width: 15%;
+  height 100%;
+}
+
+.gameField {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.leftButton, .rightButton, .theAButton, .theBButton {
+  min-width: 50px;
+  min-height: 50px;
+  width: 100%;
+  height: 50%;
+}
+
+.button {
+  background-color: #BABABA;
+}
+
+.button:hover {
+  background-color: #696969;
+}
+
+.square {
+  /* width: 6%;
+  height: 6%; */
+  width: 6.6666%;
+  padding-top: 6.6666%;
+  /* height: 6.6666%; */
+  min-width: 14px;
+  min-height: 14px;
+  background-color: white;
+}

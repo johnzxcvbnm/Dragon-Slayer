@@ -10,7 +10,7 @@
 
 <p>Although I am satisfied with how the original Dragon Slayer turned out, I still want to push it more and turn it into a more polished game.</p>
 
-<pThe first thing I want to do is re-design the UI completely.  There will be two different UIs.  One for desktop that will use keyboard bindings, the other one will be mobile with the same type of buttons that was in the original Dragon Slayer.  I also want to build menus and have a dynamic text box for combat.</p>
+<p>The first thing I want to do is re-design the UI completely.  There will be two different UIs.  One for desktop that will use keyboard bindings, the other one will be mobile with the same type of buttons that was in the original Dragon Slayer.  I also want to build menus and have a dynamic text box for combat.</p>
 
 <p>One of the other things I want to do is redo some of the map logic.  Add more tiles, increase the size and create hidden loading tiles.  When the player steps on a loading tile it loads a new map.  So if the player steps on a town square, it loads that towns map and when the player steps out of the town it reloads the world map.  By doing this I can also expand the world map by hiding loading squares on certain tiles (such as bridges).</p>
 
