@@ -3,6 +3,7 @@
 <h2>Jump To</h2>
 
 <p><a href="#storyAndGamplay">Story and Gameplay</a></p>
+<p><a href="#timeline">Timeline</a></p>
 <p><a href="#theMap">The Map</a></p>
 <p><a href="#combat">Combat</a></p>
 <p><a href="#stats">Stats</a></p>
@@ -18,6 +19,21 @@ You are a knight of the realm, but alas, the Princess has been kidnapped by a Dr
 The player always spawns in the same initial castle location.  The boss (Dragon) however, spawns randomly in one of the other castles.  The goal of the game is to explore the map to find the castle where the boss is, and to defeat him.  The player loses when they lose all of their health.
 
 I wanted to make a fairly simple game that didn't really need much explanation.  Even the goal of the game "Slay the Dragon. Rescue the Princess" is on top of the screen, reminding players what they need to do, should they forget.  The two major systems in the game is the mapping system and the battle system.
+
+<hr id=""#timeline">
+<p>This is the general timeline I used to develop the project.  I wrote this part afterwards so it's not an exact timeline.  This was originally for my first project while I was at General Assembly, so I only had a week to build everything.  In the end I managed to build everything I wanted to and finished the project on time.</p>
+
+<p>The very first thing I needed to do was design the main page.  I couldn't build, design or test the actual game until I got this done.  I wrote out a few different designs with exact measurements and picked one.  I laid out the basic HTML elements and game them some basic CSS style to get everything in place.  It was important to me to get the buttons aligned correctly from day one to get it out of the way.</p>
+
+<p>With the general design out of the way, now I could start building the map and the coordinate system (which you can read more about below in the map section) and the players field of view.  My first version of the map was actually just plain white squares with a border and their X and Y printed in the square.  Very basic, but it worked.  I added button functionality and tested it to see if you could move around the map.  The test was successful and I could move onto the next step.</p>
+
+<p>It was when I needed to add classes (to create tiles) to each square did I realize that I had to add to do this on all the squares (50 x 50 = 2500 squares I had to alter).  So to do that I made a simple map maker.  The map maker is the overview of the total map which allows me to dynamically change the class of the squares to create the map I wanted.  Then I exported the information from the map maker and created functions to style the map in the main game.  I finished the map by adding game logic (you can't move on top of squares that have the class of water [water tiles] or mountain [mountain tiles]).  </p>
+
+<p>Once the map was complete I had to build combat.  Since I only had a few days to build everything I wanted to keep combat very simple.  The player would make his choice, then the monster would simply attack back, if it was still alive.  First I needed to build towards the win condition, so I built the variables for the player, the boss, and the empty enemy object that the player would always fight against.  I added the button functionality and now you could win or lose the game.  The basic game was finished at this point.</p>
+
+<p>The next thing I added was random encounters with more monsters.  I tested things out and scaled the monsters differently to give the game some balance.  It was at this point that I was entering in the final stretch of the project.  I finished styling the main page with more CSS (Fonts, Font Size, etc), then I created the 'About' and 'How to Play' models to finish the game off.  I had a little bit of extra time in the end so I was able to build in some 'cheat codes' to make the game a little more fun as a bonus.</p>
+
+<p>Overall I am happy with how this program turned out and it's one of my favorites so far.</p>
 
 <hr id="theMap">
 <h2>The Map</h2>
