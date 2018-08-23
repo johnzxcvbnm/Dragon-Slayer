@@ -1,23 +1,307 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" class="no-js">
   <head>
-    <meta charset="utf-8">
-    <title>Kusching Projects</title>
-  </head>
-  <body>
-    <h3>Index</h3>
-    <h3>Projects</h3>
-      <li><a href="Games/DragonSlayer/index.html">Dragon Slayer</a></li>
-      <!-- <li><a href="Games/DragonSlayer-2/index.html">Dragon Slayer 2</a></li> -->
-      <li><a href="#">Dragon Slayer 2 - Coming Soon</a></li>
-      <li><a href="https://the-cooking-epidemic.herokuapp.com/">The Cooking Epidemic</a></li>
-      <li><a href="Games/SpaceBattle/index.html">Space Battle</a></li>
-      <li><a href="Games/DragonSlayer-Map-Builder/index.html">Dragon Slayer Map Builder</a></li>
-    Dragon Slayer
-    Summary
-    Built with:
-    Challenges
-    Future Features
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kusching Designs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Kusching - Full Stack Developer" />
+    <meta name="keywords" content="Kusching, full stack developer, frontend developer, resume, jquery, css3, backend developer, web developer" />
+    <meta name="author" content="John Kusching" />
+    <link rel="shortcut icon" href="k_favicon.png">
 
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/transition-animations.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+  </head>
+
+  <body>
+
+    <div id="page" class="page template-style-dark">
+      <!-- Header -->
+      <header id="site_header" class="header mobile-menu-hide header-color-dark">
+        <div class="site-title-block">
+          <h1 class="site-title">John Kusching</h1>
+        </div>
+
+        <!-- Navigation -->
+        <div class="site-nav">
+          <!-- Main menu -->
+          <ul id="nav" class="site-main-menu">
+            <li>
+              <a class="pt-trigger" href="#home"><i class="menu-icon pe-7s-icon pe-7s-home"></i>Home</a>
+              <!-- href value = data-id without # of .pt-page. -->
+            </li>
+            <li>
+              <a class="pt-trigger" href="#about_me"><i class="menu-icon pe-7s-icon pe-7s-user"></i>About me</a>
+            </li>
+            <li>
+              <a class="pt-trigger" href="#resume"><i class="menu-icon pe-7s-icon pe-7s-id"></i>Resume</a>
+            </li>
+            <li>
+              <a class="pt-trigger" href="#portfolio"><i class="menu-icon pe-7s-icon pe-7s-portfolio"></i>Portfolio</a>
+            </li>
+            <li>
+              <a class="pt-trigger" href="#contact"><i class="menu-icon pe-7s-icon pe-7s-mail"></i>Contact</a>
+            </li>
+          </ul>
+          <!-- /Main menu -->
+        </div>
+        <!-- Navigation -->
+      </header>
+      <!-- /Header -->
+
+      <!-- Mobile Header -->
+      <div class="mobile-header mobile-visible">
+        <div class="mobile-logo-container">
+          <div class="mobile-site-title">John Kusching</div>
+        </div>
+
+        <a class="menu-toggle mobile-visible">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!-- /Mobile Header -->
+
+      <!-- Main Content -->
+      <div id="main" class="site-main">
+        <!-- Page changer wrapper -->
+        <div class="pt-wrapper" style="background-image: url(images/main_bg_light.jpg);">
+          <!-- Subpages -->
+          <div class="subpages">
+
+            <!-- Home Subpage -->
+            <section class="pt-page pt-page-1 section-without-bg section-paddings-0 table" data-id="home">
+              <div class="section-inner">
+                <div class="home-page-block">
+                  <h2>John Kusching</h2>
+                    <p class="home-page-description">Full Stack Developer</p>
+                </div>
+              </div>
+            </section>
+            <!-- End of Home Subpage -->
+
+            <!-- About Me Subpage -->
+            <section class="pt-page pt-page-2" data-id="about_me">
+              <div class="border-block-top-110"></div>
+              <div class="section-inner">
+                <div class="section-title-block">
+                  <div class="section-title-wrapper clearfix">
+                    <h2 class="section-title">About Me</h2>
+                    <h5 class="section-description">Creative Thinker, Problem Solver</h5>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-4 subpage-block">
+                    <div class="my-photo-block">
+                      <img src="images/headshot.jpg" alt="">
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-6 col-lg-4">
+                    <h3>I am a Full Stack Developer</h3>
+                    <p>I'm a natural problem solver. I like to pick things apart to fully understand the whole. I often find solutions to problems you didn't even know you had. The only thing better than finding a solution is learning something new as part of the process because I'm always looking to grow and refine all of my skills.</p>
+                    <p>When I'm not coding I like to visiti nature, so often times you'll find me exploring a nearby park or out camping</p>
+                  </div>
+
+                  <div class="col-sm-6 col-md-6 col-lg-4 subpage-block">
+                    <ul class="info-list">
+                      <li><span class="title">Residence</span><span class="value">USA</span></li>
+                      <li><span class="title">Address</span><span class="value">Plano, TX</span></li>
+                      <li><span class="title">e-mail</span><span class="value"><a href="mailto:kusching.john@gmail.com">kusching.john@gmail.com</a></span></li>
+                    </ul>
+
+                    <ul class="social-links">
+                      <li><a class="tip social-button" href="https://www.linkedin.com/in/kusching/" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a class="tip social-button" href="https://github.com/johnzxcvbnm" title="Git Hub"><i class="fa fa-github"></i></a></li>
+                      <li><a class="tip social-button" href="#" title="General Assembly"><i class="fa fa-book"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- End of About Me Subpage -->
+
+            <!-- Resume Subpage -->
+            <section class="pt-page pt-page-3" data-id="resume">
+              <div class="border-block-top-110"></div>
+              <div class="section-inner">
+                <div class="section-title-block">
+                  <div class="section-title-wrapper">
+                    <h2 class="section-title">Resume</h2>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6 col-md-4 subpage-block">
+                    <div class="block-title">
+                      <h3>Education</h3>
+                    </div>
+                    <div class="timeline">
+                      <div class="timeline-event te-primary">
+                        <h5 class="event-date">2018</h5>
+                        <h4 class="event-name">Web Development Remote</h4>
+                        <span class="event-description">General Assembly</span>
+                        <p>General Assembly</p>
+                      </div>
+                      <div class="timeline-event te-primary">
+                        <h5 class="event-date">2008</h5>
+                        <h4 class="event-name">General Studies</h4>
+                        <span class="event-description">University of North Texas</span>
+                        <p>University of North Texas</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-4 subpage-block">
+                    <div class="block-title">
+                      <h3>Experience</h3>
+                    </div>
+                    <div class="timeline">
+                      <!-- Single event -->
+                      <div class="timeline-event te-primary">
+                        <h5 class="event-date">May 2018 - Aug 2018</h5>
+                        <h4 class="event-name">Web Development Fellow</h4>
+                        <span class="event-description">General Assembly</span>
+                        <p>General Assembly’s Web Development Immersive (WDI) is a 12-week long training program dedicated to give students a deep dive into the world of web development, focusing on web development tools and best practices. Also consider profiling projects and skills here: Git/Github, HTML, CSS, JavaScript, Node, MongoDB, SQL, Ruby, etc.</p>
+                      </div>
+                      <!-- Single event -->
+                      <div class="timeline-event te-primary">
+                        <h5 class="event-date">Jun 2006 - Apr 2018</h5>
+                        <h4 class="event-name">Grocery Manager</h4>
+                        <span class="event-description">Albertsons</span>
+                        <p>Grocery Manager</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-4 subpage-block">
+                    <div class="block-title">
+                      <h3>Skills</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-12">
+                    <div class="download-cv-block">
+                      <a class="button" target="_blank" href="https://drive.google.com/open?id=1c2r6OMjg3jNXU6NrwBFA2eqxco6SlrEu">Download Resume</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- End Resume Subpage -->
+
+
+            <!-- Portfolio Subpage -->
+            <section class="pt-page pt-page-4" data-id="portfolio">
+              <div class="border-block-top-110"></div>
+              <div class="section-inner">
+                <div class="section-title-block">
+                  <div class="section-title-wrapper">
+                    <h2 class="section-title">Portfolio</h2>
+                    <h5 class="section-description">My Best Works</h5>
+                  </div>
+                </div>
+
+                <!-- Portfolio Content -->
+                <div class="portfolio-content">
+
+                  <!-- Portfolio Grid -->
+                  <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
+
+                    <!-- Portfolio Item 1 -->
+                    <figure class="item">
+                      <a href="https://johnzxcvbnm.github.io/Games/DragonSlayer/index.html">
+                        <img src="images/portfolio/dragon_slayer.png" alt="Dragon Slayer">
+                      </a>
+                      <h5 class="name">Dragon Slayer</h5>
+                      <p>Slay the Dragon, Save the Princess <a class="port_links" href="https://github.com/johnzxcvbnm/johnzxcvbnm.github.io/blob/master/Games/DragonSlayer/README.md">Read Me</a></p>
+                    </figure>
+                    <!-- /Portfolio Item 1 -->
+
+                    <!-- Portfolio Item 2 -->
+                    <figure class="item">
+                      <a href="https://the-cooking-epidemic.herokuapp.com/recipe/index">
+                        <img src="images/portfolio/cooking_epidemic.png" alt="">
+                      </a>
+                      <h5 class="name">The Cooking Epidemic</h5>
+                      <p>A collection of cooking recipies. <a class="port_links" href="https://github.com/johnzxcvbnm/the-cooking-epidemic/blob/master/README.md">Read Me</a></p>
+                    </figure>
+                    <!-- /Portfolio Item 2 -->
+
+                    <!-- Portfolio Item 3 -->
+                    <figure class="item">
+                      <a href="https://whats-that-trailer.herokuapp.com/">
+                        <img src="images/portfolio/whats_that_trailer.png" alt="">
+                      </a>
+                      <h5 class="name">What's that Trailer</h5>
+                      <p>Add your favorite movies from an external API. <a class="port_links" href="https://github.com/kweingart08/What-s-that-Trailer/blob/master/README.md">Read Me</a></p>
+                    </figure>
+                    <!-- /Portfolio Item 3 -->
+
+                    <!-- Portfolio Item 4 -->
+                    <figure class="item">
+                      <a href="https://quitter-app.herokuapp.com/">
+                        <img src="images/portfolio/quitter.png" alt="">
+                      </a>
+                      <h5 class="name">Quitter</h5>
+                      <p>Where users can create, comment and like posts/images. <a class="port_links" href="https://github.com/johnzxcvbnm/Quitter/blob/master/README.md">Read Me</a></p>
+                    </figure>
+                    <!-- /Portfolio Item 4 -->
+
+                  <!-- /Portfolio Grid -->
+
+                </div>
+                <!-- /Portfolio Content -->
+              </div>
+            </section>
+            <!-- /Portfolio Subpage -->
+
+            <!-- Contact Subpage -->
+            <section class="pt-page pt-page-5" data-id="contact">
+              <div class="border-block-top-110"></div>
+              <div class="section-inner">
+                <div class="section-title-block">
+                  <div class="section-title-wrapper">
+                    <h2 class="section-title">Contact</h2>
+                    <h5 class="section-description">Get in Touch</h5>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <p>Contact Me:</p>
+                </div>
+              </div>
+            </section>
+            <!-- End Contact Subpage -->
+          </div>
+        </div>
+        <!-- /Page changer wrapper -->
+      </div>
+      <!-- /Main Content -->
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/pages-switcher.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/jquery.shuffle.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/jquery.hoverdir.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
