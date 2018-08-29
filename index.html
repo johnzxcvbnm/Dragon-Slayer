@@ -24,10 +24,22 @@
   </head>
 
   <body>
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="preloader-animation">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
+    </div>
+    <!-- /Loading animation -->
 
     <div id="page" class="page template-style-dark">
       <!-- Header -->
       <header id="site_header" class="header mobile-menu-hide header-color-dark">
+        <!-- <div class="my-photo tilt-effect">
+          <img src="images/headshot2.png" alt="image">
+        </div> -->
+
         <div class="site-title-block">
           <h1 class="site-title">John Kusching</h1>
         </div>
@@ -37,20 +49,19 @@
           <!-- Main menu -->
           <ul id="nav" class="site-main-menu">
             <li>
-              <a class="pt-trigger" href="#home"><i class="menu-icon pe-7s-icon pe-7s-home"></i>Home</a>
-              <!-- href value = data-id without # of .pt-page. -->
+              <a class="pt-trigger" href="#home" data-animation="21"><i class="menu-icon pe-7s-icon pe-7s-home"></i>Home</a><!-- href value = data-id without # of .pt-page. -->
             </li>
             <li>
-              <a class="pt-trigger" href="#about_me"><i class="menu-icon pe-7s-icon pe-7s-user"></i>About me</a>
+              <a class="pt-trigger" href="#about_me" data-animation="17"><i class="menu-icon pe-7s-icon pe-7s-user"></i>About me</a>
             </li>
             <li>
-              <a class="pt-trigger" href="#resume"><i class="menu-icon pe-7s-icon pe-7s-id"></i>Resume</a>
+              <a class="pt-trigger" href="#resume" data-animation="18"><i class="menu-icon pe-7s-icon pe-7s-id"></i>Resume</a>
             </li>
             <li>
-              <a class="pt-trigger" href="#portfolio"><i class="menu-icon pe-7s-icon pe-7s-portfolio"></i>Portfolio</a>
+              <a class="pt-trigger" href="#portfolio" data-animation="19"><i class="menu-icon pe-7s-icon pe-7s-portfolio"></i>Portfolio</a>
             </li>
             <li>
-              <a class="pt-trigger" href="#contact"><i class="menu-icon pe-7s-icon pe-7s-mail"></i>Contact</a>
+              <a class="pt-trigger" href="#contact" data-animation="20"><i class="menu-icon pe-7s-icon pe-7s-mail"></i>Contact</a>
             </li>
           </ul>
           <!-- /Main menu -->
@@ -83,7 +94,17 @@
               <div class="section-inner">
                 <div class="home-page-block">
                   <h2>John Kusching</h2>
-                    <p class="home-page-description">Full Stack Developer</p>
+                  <div class="owl-carousel text-rotation">
+                    <div class="item">
+                      <p class="home-page-description">Web Designer</p>
+                    </div>
+                    <div class="item">
+                      <p class="home-page-description">Full Stack Developer</p>
+                    </div>
+                    <!-- <div class="item">
+                      <p class="home-page-description">Backend Developer</p>
+                    </div> -->
+                  </div>
                 </div>
               </div>
             </section>
@@ -103,7 +124,7 @@
                 <div class="row">
                   <div class="col-sm-6 col-md-6 col-lg-4 subpage-block">
                     <div class="my-photo-block">
-                      <img src="images/headshot.jpg" alt="">
+                      <img src="images/headshot.jpg" alt="John Kusching">
                     </div>
                   </div>
 
@@ -115,18 +136,71 @@
 
                   <div class="col-sm-6 col-md-6 col-lg-4 subpage-block">
                     <ul class="info-list">
+                      <!-- <li><span class="title">Age</span><span class="value">29</span></li> -->
                       <li><span class="title">Residence</span><span class="value">USA</span></li>
                       <li><span class="title">Address</span><span class="value">Plano, TX</span></li>
                       <li><span class="title">e-mail</span><span class="value"><a href="mailto:kusching.john@gmail.com">kusching.john@gmail.com</a></span></li>
+                      <!-- <li><span class="title">Phone</span><span class="value">+0123 123 456 789</span></li> -->
+                      <li><span class="title">Freelance</span><span class="value available">Available</span></li>
                     </ul>
 
                     <ul class="social-links">
+                      <!-- Full list of social icons: http://fontawesome.io/icons/#brand -->
                       <li><a class="tip social-button" href="https://www.linkedin.com/in/kusching/" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
                       <li><a class="tip social-button" href="https://github.com/johnzxcvbnm" title="Git Hub"><i class="fa fa-github"></i></a></li>
-                      <li><a class="tip social-button" href="#" title="General Assembly"><i class="fa fa-book"></i></a></li>
+                      <li><a class="tip social-button" href="https://profiles.generalassemb.ly/profiles/kusching" title="General Assembly"><i class="fa fa-book"></i></a></li>
                     </ul>
                   </div>
                 </div>
+
+                <!-- Services block -->
+                <div class="block-title">
+                  <h3>Skills</h3>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6 col-md-3 subpage-block">
+                    <div class="service-block">
+                      <div class="service-info">
+                        <i class="service-icon pe-7s-icon pe-7s-browser"></i>
+                        <h4>Languages</h4>
+                        <p>JavaScript<br />Ruby<br />HTML<br />CSS</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-3 subpage-block">
+                    <div class="service-block">
+                      <div class="service-info">
+                        <i class="service-icon pe-7s-icon pe-7s-share"></i>
+                        <h4>Frameworks</h4>
+                        <p>Angular<br />Node<br />React<br />SASS</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-3 subpage-block">
+                    <div class="service-block">
+                      <div class="service-info">
+                        <i class="service-icon pe-7s-icon pe-7s-diskette"></i>
+                        <h4>Databases</h4>
+                        <p>MongoDB<br />SQL</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-3 subpage-block">
+                    <div class="service-block">
+                      <div class="service-info">
+                        <i class="service-icon pe-7s-icon pe-7s-cloud-upload"></i>
+                        <h4>Other</h4>
+                        <p>Git<br />GitHub<br />Heroku</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Services block -->
+
               </div>
             </section>
             <!-- End of About Me Subpage -->
@@ -138,6 +212,7 @@
                 <div class="section-title-block">
                   <div class="section-title-wrapper">
                     <h2 class="section-title">Resume</h2>
+                    <h5 class="section-description">Where I've Been</h5>
                   </div>
                 </div>
 
@@ -147,17 +222,19 @@
                       <h3>Education</h3>
                     </div>
                     <div class="timeline">
+                      <!-- Single event -->
                       <div class="timeline-event te-primary">
                         <h5 class="event-date">2018</h5>
                         <h4 class="event-name">Web Development Remote</h4>
                         <span class="event-description">General Assembly</span>
-                        <p>General Assembly</p>
+                        <!-- <p></p> -->
                       </div>
+                      <!-- Single event -->
                       <div class="timeline-event te-primary">
                         <h5 class="event-date">2008</h5>
-                        <h4 class="event-name">General Studies</h4>
+                        <h4 class="event-name">Computer Science</h4>
                         <span class="event-description">University of North Texas</span>
-                        <p>University of North Texas</p>
+                        <!-- <p></p> -->
                       </div>
                     </div>
                   </div>
@@ -175,21 +252,31 @@
                         <p>General Assembly’s Web Development Immersive (WDI) is a 12-week long training program dedicated to give students a deep dive into the world of web development, focusing on web development tools and best practices. Also consider profiling projects and skills here: Git/Github, HTML, CSS, JavaScript, Node, MongoDB, SQL, Ruby, etc.</p>
                       </div>
                       <!-- Single event -->
-                      <div class="timeline-event te-primary">
+                      <!-- <div class="timeline-event te-primary">
                         <h5 class="event-date">Jun 2006 - Apr 2018</h5>
                         <h4 class="event-name">Grocery Manager</h4>
                         <span class="event-description">Albertsons</span>
                         <p>Grocery Manager</p>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
 
                   <div class="col-sm-6 col-md-4 subpage-block">
                     <div class="block-title">
-                      <h3>Skills</h3>
+                      <br />
+                      <br />
                     </div>
+
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">Jun 2006 - Apr 2018</h5>
+                      <h4 class="event-name">Non-Foods Manager</h4>
+                      <span class="event-description">Tom Thumb</span>
+                      <p>I ran and managed the Non-Foods Department of Tom Thumb. I helped clean up and reopen the store in Mckinney that was closed down. As the manager I was responsible for all aspects of the department, from building displays, in-stock conditions, to more fiscal aspects like checking daily invoices for proper billing and maintaining and exceeding the given gross profit.</p>
+                    </div>
+
                   </div>
                 </div>
+
                 <div class="row">
                   <div class="col-sm-12 col-md-12">
                     <div class="download-cv-block">
@@ -215,6 +302,23 @@
 
                 <!-- Portfolio Content -->
                 <div class="portfolio-content">
+
+                  <!-- Portfolio filter -->
+                  <!-- <ul id="portfolio_filters" class="portfolio-filters">
+                    <li class="active">
+                      <a class="filter btn btn-sm btn-link active" data-group="all">All</a>
+                    </li>
+                    <li>
+                      <a class="filter btn btn-sm btn-link" data-group="media">Media</a>
+                    </li>
+                    <li>
+                      <a class="filter btn btn-sm btn-link" data-group="illustration">Illustration</a>
+                    </li>
+                    <li>
+                      <a class="filter btn btn-sm btn-link" data-group="video">Video</a>
+                    </li>
+                  </ul> -->
+                  <!-- End of Portfolio filter -->
 
                   <!-- Portfolio Grid -->
                   <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
@@ -279,11 +383,88 @@
                 </div>
 
                 <div class="row">
-                  <p>Contact Me:</p>
+                  <div class="col-sm-6 col-md-6 subpage-block">
+                    <div class="block-title">
+                      <h3>Get in Touch</h3>
+                    </div>
+                    <p>Do you have an idea you would like to discuss or a project you need help creating?  Don't hesitate to contact me and we can discuss how to bring your ideas into reality.</p>
+                    <div class="contact-info-block">
+                      <div class="ci-icon">
+                        <i class="pe-7s-icon pe-7s-map-marker"></i>
+                      </div>
+                      <div class="ci-text">
+                        <h5>Plano, Texas</h5>
+                      </div>
+                    </div>
+                    <div class="contact-info-block">
+                      <div class="ci-icon">
+                        <i class="pe-7s-icon pe-7s-mail"></i>
+                      </div>
+                      <div class="ci-text">
+                        <h5>kusching.john@gmail.com</h5>
+                      </div>
+                    </div>
+                    <div class="contact-info-block">
+                      <div class="ci-icon">
+                        <i class="pe-7s-icon pe-7s-check"></i>
+                      </div>
+                      <div class="ci-text">
+                        <h5>Freelance Available</h5>
+                      </div>
+                    </div>
+                    <!-- <div class="contact-info-block flexy">
+                      <div class="ci-icon">
+                        <a href="#"><i class="pe-7s-icon fa fa-linkedin"></i></a>
+                      </div>
+                      <div class="ci-icon">
+                        <a href="#"><i class="pe-7s-icon fa fa-github-alt"></i></a>
+                      </div>
+                      <div class="ci-icon">
+                        <a href="#"><i class="pe-7s-icon fa fa-linkedin"></i></a>
+                      </div>
+                    </div> -->
+
+                  </div>
+
+                  <div class="col-sm-6 col-md-6 subpage-block">
+                    <div class="block-title">
+                      <h3>Contact Form</h3>
+                    </div>
+                    <form id="contact-form" method="post" action="contact_form/contact_form.php">
+
+                      <div class="messages"></div>
+
+                      <div class="controls">
+                        <div class="form-group">
+                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Full Name" required="required" data-error="Name is required.">
+                            <div class="form-control-border"></div>
+                            <i class="form-control-icon pe-7s-user"></i>
+                            <div class="help-block with-errors"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Email Address" required="required" data-error="Valid email is required.">
+                            <div class="form-control-border"></div>
+                            <i class="form-control-icon pe-7s-mail"></i>
+                            <div class="help-block with-errors"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for Me" rows="4" required="required" data-error="Please, leave me a message."></textarea>
+                            <div class="form-control-border"></div>
+                            <i class="form-control-icon pe-7s-comment"></i>
+                            <div class="help-block with-errors"></div>
+                        </div>
+
+                        <input type="submit" class="button btn-send" value="Send message">
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </section>
             <!-- End Contact Subpage -->
+
           </div>
         </div>
         <!-- /Page changer wrapper -->

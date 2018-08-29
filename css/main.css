@@ -1,6 +1,35 @@
+/*
+* Template Name: Unique - Responsive vCard Template
+* Author: lmpixels
+* Author URL: http://themeforest.net/user/lmpixels
+* Version: 1.3.1
+*/
+
+/* =============================================================================
+
+1. Fonts
+2. General styles (Buttons, Inputs, Typography)
+3. Page loading animation
+4. Subpages changer
+5. Site header (Panel with logo & navigation)
+6. Site content
+7. Subpages
+  7.1. Home subpage
+  7.2. About Me subpage
+  7.3. Resume subpage
+  7.4. Portfolio subpage
+  7.5. Contact subpage
+8. Sliders (testimonials & portfolio carousels)
+9. Portfolio Full info page
+10. Media Queries
+11. Template Customization (Light or Dark style, Header background color, Header position)
+
+============================================================================= */
 
 
-/* Fonts */
+/* =============================================================================
+1. Fonts
+============================================================================= */
 /* 7 stroke icons font by Pixeden */
 @import url('pe-icon-7-stroke.css'); /* Full icons list: http://themes-pixeden.com/font-demos/7-stroke/index.html */
 
@@ -11,7 +40,10 @@
 @import url("http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Oxygen:300,400,700");
 
 
-/* General styles */
+/* =============================================================================
+2. General styles
+============================================================================= */
+
 html {
   height: 100%;
 }
@@ -316,7 +348,9 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 
-/* Page loadig animation */
+/* =============================================================================
+3. Page loadig animation
+============================================================================= */
 .no-js .preloader { display: none;  }
 .preloader {
   position: fixed;
@@ -395,7 +429,9 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 
-/* Subpages changer */
+/* =============================================================================
+4. Subpages changer
+============================================================================= */
 .pt-wrapper {
   position: relative;
   width: 100%;
@@ -534,7 +570,9 @@ textarea.form-control, textarea.form-control:focus {
 }
 /* /Page changer */
 
-/* Site header (Panel with logo & navigation) */
+/* =============================================================================
+5. Site header (Panel with logo & navigation)
+============================================================================= */
 .header {
   position: fixed;
   width: 150px;
@@ -647,8 +685,13 @@ ul.social-links li:last-child a {
   line-height: 50px;
 }
 
+/* ----- Header ----- */
 
-/* Site content */
+
+
+/* =============================================================================
+6. Site content
+============================================================================= */
 .site-main {
   height: 100%;
   margin-left: 150px;
@@ -907,7 +950,12 @@ ul.social-links li:last-child a {
 
 
 
- /* Home subpage */
+/* =============================================================================
+7. Subpages
+============================================================================= */
+/* =======================================
+7.1. Home subpage
+======================================= */
 .table {
   display: table;
   table-layout: fixed;
@@ -950,7 +998,9 @@ ul.social-links li:last-child a {
 
 
 
- /* About Me subpage */
+/* =======================================
+7.2. About Me subpage
+======================================= */
 .my-photo-block {
   position: relative;
 }
@@ -1147,7 +1197,9 @@ ul.social-links li:last-child a {
 /* /Testimonials */
 
 
- /* Resume subpage */
+/* =======================================
+7.3. Resume subpage
+======================================= */
 /* Timeline  */
 .timeline {
   position: relative;
@@ -1290,7 +1342,9 @@ ul.social-links li:last-child a {
 /* Skills */
 
 
- /* Portfolio subpage */
+/* =======================================
+7.4. Portfolio subpage
+======================================= */
 .portfolio-grid {
   margin-left: -0.5em;
   margin-right: -0.5em;
@@ -1415,7 +1469,9 @@ ul.social-links li:last-child a {
 
 
 
- /* Contact subpage */
+/* =======================================
+7.5. Contact subpage
+======================================= */
 /* Contact info */
 .contact-info-block {
   position: relative;
@@ -1453,7 +1509,9 @@ ul.social-links li:last-child a {
 /* /Contact info */
 
 
- /* Sliders */
+/* =============================================================================
+8. Sliders
+============================================================================= */
 /* Testimonials Carousel */
 .testimonials.owl-carousel .owl-nav {
   position: absolute;
@@ -1601,7 +1659,9 @@ ul.social-links li:last-child a {
 /* Portfolio Carousel */
 
 
- /* Portfolio Full info page */
+/* =============================================================================
+9. Portfolio Full info page
+============================================================================= */
 .page-ajax-loaded {
   position: absolute;
   background-color: #fff;
@@ -1759,7 +1819,9 @@ ul.social-links li:last-child a {
 
 
 
- /* Media Queries */
+/* =============================================================================
+10. Media Queries
+============================================================================= */
 
 @media only screen and (max-width: 1320px) {
   .portfolio-grid figure {
@@ -1954,7 +2016,9 @@ ul.social-links li:last-child a {
 
 
 
- /* Template Customization */
+/* =============================================================================
+11. Template Customization
+============================================================================= */
 /* Dark Template Style */
 .template-style-dark .pt-page {
   background-color: #222;

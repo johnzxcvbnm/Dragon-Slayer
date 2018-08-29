@@ -1,12 +1,18 @@
+/*
+* Template Name: Unique - Responsive vCard Template
+* Author: lmpixels
+* Author URL: http://themeforest.net/user/lmpixels
+* Version: 1.3.1
+*/
 
 (function($) {
 "use strict";
-
+    
     // Portfolio subpage filters
     function portfolio_init() {
         var portfolio_grid = $('#portfolio_grid'),
             portfolio_filter = $('#portfolio_filters');
-
+            
         if (portfolio_grid) {
 
             portfolio_grid.shuffle({
