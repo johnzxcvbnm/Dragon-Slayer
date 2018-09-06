@@ -1,7 +1,9 @@
-# Dragon-Slayer
+# <a href="https://johnzxcvbnm.github.io/Games/DragonSlayer/index.html">Dragon-Slayer</a>
 <hr>
 <h2>Jump To</h2>
 
+<p><a href="#summary">Summary</a></p>
+<p><a href="#built">Built With</a></p>
 <p><a href="#storyAndGamplay">Story and Gameplay</a></p>
 <p><a href="#timeline">Timeline</a></p>
 <p><a href="#theMap">The Map</a></p>
@@ -10,6 +12,17 @@
 <p><a href="#specialCommands">Special Commands</a></p>
 <p><a href="#links">Links</a></p>
 
+<hr id="summary">
+<h2>Summary</h2>
+<br>
+A small game where the player explores the map looking for the Dragon (final boss) that kidnapped the princess.  The game contains simple movement and combat, but has several random elements including random encounters, a random location for the Dragon, as well as all the random rolls that happen during combat.
+
+
+<hr id="built">
+<h2>Built With</h2>
+<br>
+
+Javascript, jQuery, HTML/CSS
 
 <hr id="storyAndGameplay">
 <h2>Story and Gameplay</h2>
@@ -20,7 +33,9 @@ The player always spawns in the same initial castle location.  The boss (Dragon)
 
 I wanted to make a fairly simple game that didn't really need much explanation.  Even the goal of the game "Slay the Dragon. Rescue the Princess" is on top of the screen, reminding players what they need to do, should they forget.  The two major systems in the game is the mapping system and the battle system.
 
-<hr id=""#timeline">
+<hr id="#timeline">
+<h2>Timeline</h2>
+
 <p>This is the general timeline I used to develop the project.  I wrote this part afterwards so it's not an exact timeline.  This was originally for my first project while I was at General Assembly, so I only had a week to build everything.  In the end I managed to build everything I wanted to and finished the project on time.</p>
 
 <p>The very first thing I needed to do was design the main page.  I couldn't build, design or test the actual game until I got this done.  I wrote out a few different designs with exact measurements and picked one.  I laid out the basic HTML elements and game them some basic CSS style to get everything in place.  It was important to me to get the buttons aligned correctly from day one to get it out of the way.</p>
@@ -122,6 +137,7 @@ Link - This is actually a throwback to the old Zelda games on the NES.  When you
 <hr id="links">
 <h2>Links</h2>
 
-<p><a href="https://johnzxcvbnm.github.io/">To my Other Games</a></p>
 <p><a href="https://johnzxcvbnm.github.io/Games/DragonSlayer/index.html">Dragon Slayer</a></p>
+<p><a href="http://kusching.com/">Portfolio</a></p>
+<p><a href="https://github.com/johnzxcvbnm">GitHub</a></p>
 <p><a href="https://www.linkedin.com/in/kusching/">LinkedIn</a></p>
